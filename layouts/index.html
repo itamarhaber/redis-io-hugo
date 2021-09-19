@@ -1,0 +1,41 @@
+{{- define "main" -}}
+
+<!-- TODO: take this from intro.md -->
+<div>
+    Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions, and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster. Learn more →
+</div>
+
+<div>
+    <!-- TODO -->
+   <h2> Try... Download ... Quickl link....</h2>
+</div>
+
+<div>
+    <!-- TODO -->
+    <h2>News...</h2>
+</div>
+<!-- {{ $homepage := "Home" }}
+{{ with .Site.Menus.nav }}
+  {{ range first 1 . }}
+    {{ $homepage = .Name }}
+  {{ end }}
+{{ end }}
+<h1>{{ $homepage }}</h1>
+
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ range $pages.ByPublishDate.Reverse }}
+  <p>
+    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+    {{ $customDateFormat := "January 2, 2006" }}
+    {{ with .Site.Params.customDateFormat }}{{ $customDateFormat = . }}{{ end }}
+    <br>
+    <small class="text-secondary">{{ .PublishDate.Format $customDateFormat }}</small>
+    {{ partial "tags" . }}
+    {{ if eq .Site.Params.showPostSummary true }}
+    <br>
+    {{ .Summary }}
+    {{ end }}
+  </p>
+{{ end }}
+ -->
+{{- end -}}

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main id="main">
+  <div>
+    Filter by: ...
+  </div>
+  <div class="commands-list">
+    {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="commands-summary">
+      {{ .Render "summary" }}
+      </a>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

@@ -1,0 +1,62 @@
+{{ $arg := . }}
+{{ if reflect.IsSlice $arg }}
+  <!-- Handle an array of arguments  -->
+  {{ range . }}
+    {{ $s := partial "commands/arguments" . }}
+    {{- $s -}}
+  {{ end }}
+{{ else if reflect.IsMap $arg }}
+  {{ $s := "" }}
+  {{ if not (isset $arg "type") }}
+    {{ errorf "No 'type' set for argument %q" . }}
+  {{ else }}
+    {{ if reflect.IsSlice $arg.name }}
+      <!-- List of names and types -->
+      {{ $i := 0 }}
+      {{ $l := "" }}
+      {{ range $arg.name }}
+        {{ $d := dict "name" . "type" (index $arg.type $i) }}
+        {{ $p := partial "commands/arguments" $d }}
+        {{ $l = printf "%s %s" $l (trim $p " \n") }}
+      {{ end }}
+      {{ $s = trim $l " \n" }}
+      {{ if isset $arg "multiple" }}
+        {{ $s = printf "%s [%s ...]" $s $s }}
+      {{ else }}
+      {{ end }}
+    {{ else if in (slice "integer" "double" "string" "posix time" "type" "pattern" "key") $arg.type }}
+      <!-- Simple types  -->
+      {{ $s = printf "%s" $arg.name }}
+      {{ if isset $arg "multiple" }}
+        {{ $s = printf "%s [%s ...]" $s $s }}
+      {{ end }}
+    {{ else if eq $arg.type "enum" }}
+      <!-- Enum type -->
+      {{ range $arg.enum }}
+        {{ $s = printf "%s%s|" $s . }}
+      {{ end }}
+      <!-- Remove last pipe character -->
+      {{ $s = substr $s 0 (sub (len $s) 1) }}
+      {{ $s = trim $s " \n"}}
+    {{ else if eq $arg.type "block" }}
+      <!-- Block type -->
+      {{ $p := partial "commands/arguments" $arg.block }}
+      {{ $s = trim $p " \n" }}
+    {{ else if eq $arg.type "command" }}
+      {{ $s = $arg.command }}
+    {{ else }}
+      {{ errorf "Unhandeled argument type %s" . }}
+    {{ end }}
+  {{ end }}
+
+  {{ if and (isset $arg "command") (not (eq $arg.type "command")) }}
+    <!-- Print the command if it exists -->
+    {{ $s = printf "%s %s" $arg.command $s }}
+  {{ end }}
+
+  {{ if isset $arg "optional" }}
+    <!-- Mark as optional if needed -->
+    {{ $s = printf "[%s]" (trim $s " \n") }}
+  {{ end }}
+  {{- $s -}}
+{{ end }}

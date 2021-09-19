@@ -1,0 +1,22 @@
+{{ $cname := replace (upper .File.TranslationBaseName) "-" " " 1 }}
+{{ $cdata := (index $.Site.Data.commands $cname) }}
+
+{{ $syntax := "" }}
+{{ if isset $cdata "arguments" }}
+{{ $syntax = trim (partial "commands/arguments" $cdata.arguments) " \n" }}
+{{ end }}
+
+<article>
+    <header>
+      <span class="command-name">
+        {{ $cname }}
+      </span>
+      <span class="command-syntax">
+        {{ $syntax }}
+      </span>
+    </header>
+
+    <footer class="command-details">
+      {{ .Params.summary }}
+    </footer>
+</article>

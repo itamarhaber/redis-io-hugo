@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main id="main">
+  <div>
+    <!-- TODO: Filter by group, search for -->
+  </div>
+  <div>
+    {{ range .Pages }}
+    {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</main>
+{{ end }}

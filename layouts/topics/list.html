@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main id="main">
+  <section>
+    <ul>
+      {{ range (.GetTerms "document") }}
+        <li>{{ . }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+</main>
+{{ end }}

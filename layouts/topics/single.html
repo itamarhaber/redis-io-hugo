@@ -1,0 +1,86 @@
+{{ define "main" }}
+<section id="main">
+  <h2 id="title" class="command">
+    <code>
+      {{ .Title }} {{ .Params.syntax }}
+    </code>
+  </h2>
+  <div class="command-information">
+    <p>
+      <strong>Available since:</strong> {{ .Params.since }}
+    </p>
+    <p>
+      <strong>Time complexity:</strong> {{ .Params.complexity }}
+    </p>
+    <p>
+      <strong>ACL categories:</strong>
+      {{ range .Params.acl_categories}}
+      <em>@{{ . }}</em>
+      {{ end }}
+    </p>
+  </div>
+
+  <div>
+    <article id="content" class="command-documentation">
+      {{ .Content }}
+
+      <h3>Reply</h3>
+      <!-- TODO: hyper-link resp, replace \n -->
+      {{ .Params.return_summary | markdownify }}
+
+      {{ if isset .Params "history" }}
+      <h3>History</h3>
+      <ul>
+        {{ range .Params.history }}
+        <li>
+          >= {{ index . 0 }}: {{ (index . 1) | markdownify }}
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </article>
+  </div>
+</section>
+
+<aside id="command-related">
+  Related commands
+  <ul>
+    {{ range where .Site.Pages "Params.group" .Params.group}}
+    <li>
+      <a href="/commands/{{ .Params.fname }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</aside>
+
+<aside id="meta">
+  <div>
+    <section>
+      <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+    </section>
+    {{ with .Params.topics }}
+    <ul id="topics">
+      {{ range . }}
+      <li><a href="{{ " topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    {{ with .Params.tags }}
+    <ul id="tags">
+      {{ range . }}
+      <li> <a href="{{ " tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+  <div>
+    {{ with .PrevInSection }}
+    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+    {{ end }}
+    {{ with .NextInSection }}
+    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+    {{ end }}
+  </div>
+</aside>
+{{ end }}

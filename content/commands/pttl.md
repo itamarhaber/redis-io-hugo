@@ -1,0 +1,39 @@
+{
+  "title": "PTTL",
+  "summary": "Get the time to live for a key in milliseconds",
+  "group": "generic",
+  "tags": [
+    "Command",
+    "Generic"
+  ],
+  "date": "2001-02-03",
+  "lastmod": "2001-02-03",
+  "complexity": "O(1)",
+  "since": "2.6.0",
+  "return_summary": "@integer-reply: TTL in milliseconds, or a negative value in order to signal an error (see the description above).",
+  "syntax": "key",
+  "acl_categories": [
+    "keyspace",
+    "slow"
+  ]
+}
+
+Like [TTL](/commands/ttl) this command returns the remaining time to live of a key that has an
+expire set, with the sole difference that [TTL](/commands/ttl) returns the amount of remaining
+time in seconds while [PTTL](/commands/pttl) returns it in milliseconds.
+
+In Redis 2.6 or older the command returns `-1` if the key does not exist or if the key exist but has no associated expire.
+
+Starting with Redis 2.8 the return value in case of error changed:
+
+* The command returns `-2` if the key does not exist.
+* The command returns `-1` if the key exists but has no associated expire.
+
+@examples
+
+```cli
+SET mykey "Hello"
+EXPIRE mykey 1
+PTTL mykey
+```
+

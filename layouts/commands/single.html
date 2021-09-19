@@ -1,0 +1,97 @@
+{{ define "main" }}
+
+{{ $cname := replace (upper .File.TranslationBaseName) "-" " " 1 }}
+{{ $cdata := (index $.Site.Data.commands $cname) }}
+
+<div class="command-single">
+  <h1 class="command-title">
+    {{ .Title }} {{ partial "commands/arguments" $cdata.arguments }}
+  </h1>
+  <section id="main" class="command-main">
+    <div class="command-metadata">
+      <p>
+        <strong>Available since:</strong> {{ $cdata.since }}
+      </p>
+      <p>
+        <strong>Time complexity:</strong> {{ $cdata.complexity }}
+      </p>
+      <p>
+        <strong>ACL categories:</strong>
+        {{ range $cdata.acl_categories}}
+        <em>@{{ . }}</em>
+        {{ end }}
+      </p>
+    </div>
+
+    <div>
+      <article id="content" class="command-documentation">
+        {{ .Content }}
+
+        <h3>Reply</h3>
+        <!-- TODO: hyper-link resp, replace \n -->
+        {{ $cdata.return_summary | markdownify }}
+
+        {{ if isset $cdata "history" }}
+        <h3>History</h3>
+        <ul>
+          {{ range $cdata.history }}
+          <li>
+            >= {{ index . 0 }}: {{ (index . 1) | markdownify }}
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </article>
+    </div>
+  </section>
+
+  <aside class="command-related">
+    <h2>Related commands</h2>
+    {{ $me := .RelPermalink }}
+    <ul>
+      {{ range where .Site.Pages "Params.group" $cdata.group}}
+      <li>
+        {{ if eq $me .RelPermalink }}
+        <strong>
+        {{ end }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ if eq $me .RelPermalink }}
+        </strong>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </aside>
+
+  <aside class="command-meta">
+    <div>
+      <section>
+        <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+        <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+      </section>
+      {{ with $cdata.topics }}
+      <ul id="topics">
+        {{ range . }}
+        <li><a href="{{ " topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+      {{ with $cdata.tags }}
+      <ul id="tags">
+        {{ range . }}
+        <li> <a href="{{ " tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+    <div>
+      {{ with .PrevInSection }}
+      <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+      {{ end }}
+      {{ with .NextInSection }}
+      <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+      {{ end }}
+    </div>
+  </aside>
+</div>
+{{ end }}
