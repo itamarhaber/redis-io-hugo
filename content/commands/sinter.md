@@ -1,23 +1,3 @@
-{
-  "title": "SINTER",
-  "summary": "Intersect multiple sets",
-  "group": "set",
-  "tags": [
-    "Command",
-    "Set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N*M) worst case where N is the cardinality of the smallest set and M is the number of sets.",
-  "since": "1.0.0",
-  "return_summary": "@array-reply: list with members of the resulting set.",
-  "syntax": "key ...",
-  "acl_categories": [
-    "set",
-    "slow"
-  ]
-}
-
 Returns the members of the set resulting from the intersection of all the given
 sets.
 

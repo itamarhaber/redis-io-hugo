@@ -1,24 +1,3 @@
-{
-  "title": "ACL CAT",
-  "summary": "List the ACL categories or the commands inside a category",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) since the categories and commands are a fixed set.",
-  "since": "6.0.0",
-  "return_summary": "@array-reply: a list of ACL categories or a list of commands inside a given category. The command may return an error if an invalid category name is given as argument.",
-  "syntax": "[categoryname]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command shows the available ACL categories if called without arguments.
 If a category name is given, the command shows all the Redis commands in
 the specified category.

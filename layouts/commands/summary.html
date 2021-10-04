@@ -6,7 +6,8 @@
 {{ $syntax = trim (partial "commands/arguments" $cdata.arguments) " \n" }}
 {{ end }}
 
-<article>
+<a href="{{ .RelPermalink }}" class="commands-summary" redis-command="{{ $cname }}" redis-group="{{ $cdata.group }}">
+  <article>
     <header>
       <span class="command-name">
         {{ $cname }}
@@ -17,6 +18,7 @@
     </header>
 
     <footer class="command-details">
-      {{ .Params.summary }}
+      {{ $cdata.summary }}
     </footer>
-</article>
+  </article>
+</a>

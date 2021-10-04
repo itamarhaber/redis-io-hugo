@@ -1,24 +1,3 @@
-{
-  "title": "FAILOVER",
-  "summary": "Start a coordinated failover between this server and one of its replicas.",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "6.2.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was accepted and a coordinated failover is in progress. An error if the operation cannot be executed.",
-  "syntax": "[TO host port [FORCE]] [ABORT] [TIMEOUT milliseconds]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 This command will start a coordinated failover between the currently-connected-to master and one of its replicas.
 The failover is not synchronous, instead a background task will handle coordinating the failover. 
 It is designed to limit data loss and unavailability of the cluster during the failover.

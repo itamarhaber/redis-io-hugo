@@ -1,25 +1,3 @@
-{
-  "title": "LMOVE",
-  "summary": "Pop an element from a list, push it to another list and return it",
-  "group": "list",
-  "tags": [
-    "Command",
-    "List"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "6.2.0",
-  "return_summary": "@bulk-string-reply: the element being popped and pushed.",
-  "deprecated": true,
-  "syntax": "source destination LEFT|RIGHT LEFT|RIGHT",
-  "acl_categories": [
-    "list",
-    "write",
-    "slow"
-  ]
-}
-
 Atomically returns and removes the first/last element (head/tail depending on
 the `wherefrom` argument) of the list stored at `source`, and pushes the
 element at the first/last element (head/tail depending on the `whereto`

@@ -1,30 +1,3 @@
-{
-  "title": "GEOADD",
-  "summary": "Add one or more geospatial items in the geospatial index represented using a sorted set",
-  "group": "geo",
-  "tags": [
-    "Command",
-    "Geo"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)) for each item added, where N is the number of elements in the sorted set.",
-  "since": "3.2.0",
-  "return_summary": "@integer-reply, specifically:\n\n* When used without optional arguments, the number of elements added to the sorted set (excluding score updates).\n* If the `CH` option is specified, the number of elements that were changed (added or updated).",
-  "history": [
-    [
-      "6.2",
-      "Added the `CH`, `NX` and `XX` options."
-    ]
-  ],
-  "syntax": "key [NX|XX] [CH] longitude latitude member ...",
-  "acl_categories": [
-    "geo",
-    "write",
-    "slow"
-  ]
-}
-
 Adds the specified geospatial items (longitude, latitude, name) to the specified key. Data is stored into the key as a sorted set, in a way that makes it possible to query the items with the [GEOSEARCH](/commands/geosearch) command.
 
 The command takes arguments in the standard format x,y so the longitude must be specified before the latitude. There are limits to the coordinates that can be indexed: areas very near to the poles are not indexable.

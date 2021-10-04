@@ -1,23 +1,3 @@
-{
-  "title": "COMMAND",
-  "summary": "Get array of Redis command details",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the total number of Redis commands",
-  "since": "2.8.13",
-  "return_summary": "@array-reply: nested list of command details.  Commands are returned\nin random order.",
-  "syntax": "",
-  "acl_categories": [
-    "connection",
-    "slow"
-  ]
-}
-
 Returns @array-reply of details about all Redis commands.
 
 Cluster clients must be aware of key positions in commands so commands can go to matching instances,

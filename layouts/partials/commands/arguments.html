@@ -33,10 +33,10 @@
     {{ else if eq $arg.type "enum" }}
       <!-- Enum type -->
       {{ range $arg.enum }}
-        {{ $s = printf "%s%s|" $s . }}
+        {{ $s = printf "%s%s | " $s . }}
       {{ end }}
-      <!-- Remove last pipe character -->
-      {{ $s = substr $s 0 (sub (len $s) 1) }}
+      <!-- Remove last space and pipe characters -->
+      {{ $s = substr $s 0 (sub (len $s) 2) }}
       {{ $s = trim $s " \n"}}
     {{ else if eq $arg.type "block" }}
       <!-- Block type -->

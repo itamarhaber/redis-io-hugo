@@ -1,32 +1,3 @@
-{
-  "title": "BRPOPLPUSH",
-  "summary": "Pop an element from a list, push it to another list and return it; or block until one is available",
-  "group": "list",
-  "tags": [
-    "Command",
-    "List"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "2.2.0",
-  "return_summary": "@bulk-string-reply: the element being popped from `source` and pushed to `destination`.\nIf `timeout` is reached, a @nil-reply is returned.",
-  "history": [
-    [
-      "6.0",
-      "`timeout` is interpreted as a double instead of an integer."
-    ]
-  ],
-  "deprecated": true,
-  "syntax": "source destination timeout",
-  "acl_categories": [
-    "list",
-    "blocking",
-    "write",
-    "slow"
-  ]
-}
-
 [BRPOPLPUSH](/commands/brpoplpush) is the blocking variant of [RPOPLPUSH](/commands/rpoplpush).
 When `source` contains elements, this command behaves exactly like [RPOPLPUSH](/commands/rpoplpush).
 When used inside a [MULTI](/commands/multi)/[EXEC](/commands/exec) block, this command behaves exactly like [RPOPLPUSH](/commands/rpoplpush).

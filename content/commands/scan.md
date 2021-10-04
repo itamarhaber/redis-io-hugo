@@ -1,23 +1,3 @@
-{
-  "title": "SCAN",
-  "summary": "Incrementally iterate the keys space",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) for every call. O(N) for a complete iteration, including enough command calls for the cursor to return back to 0. N is the number of elements inside the collection.",
-  "since": "2.8.0",
-  "return_summary": "<summary>",
-  "syntax": "cursor [MATCH pattern] [COUNT count] [TYPE type]",
-  "acl_categories": [
-    "keyspace",
-    "slow"
-  ]
-}
-
 The [SCAN](/commands/scan) command and the closely related commands [SSCAN](/commands/sscan), [HSCAN](/commands/hscan) and [ZSCAN](/commands/zscan) are used in order to incrementally iterate over a collection of elements.
 
 * [SCAN](/commands/scan) iterates the set of keys in the currently selected Redis database.

@@ -1,25 +1,3 @@
-{
-  "title": "RPOPLPUSH",
-  "summary": "Remove the last element in a list, prepend it to another list and return it",
-  "group": "list",
-  "tags": [
-    "Command",
-    "List"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "1.2.0",
-  "return_summary": "@bulk-string-reply: the element being popped and pushed.",
-  "deprecated": true,
-  "syntax": "source destination",
-  "acl_categories": [
-    "list",
-    "write",
-    "slow"
-  ]
-}
-
 Atomically returns and removes the last element (tail) of the list stored at
 `source`, and pushes the element at the first element (head) of the list stored
 at `destination`.

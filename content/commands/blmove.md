@@ -1,26 +1,3 @@
-{
-  "title": "BLMOVE",
-  "summary": "Pop an element from a list, push it to another list and return it; or block until one is available",
-  "group": "list",
-  "tags": [
-    "Command",
-    "List"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "6.2.0",
-  "return_summary": "@bulk-string-reply: the element being popped from `source` and pushed to `destination`.\nIf `timeout` is reached, a @nil-reply is returned.",
-  "deprecated": true,
-  "syntax": "source destination LEFT|RIGHT LEFT|RIGHT timeout",
-  "acl_categories": [
-    "list",
-    "blocking",
-    "write",
-    "slow"
-  ]
-}
-
 [BLMOVE](/commands/blmove) is the blocking variant of [LMOVE](/commands/lmove).
 When `source` contains elements, this command behaves exactly like [LMOVE](/commands/lmove).
 When used inside a [MULTI](/commands/multi)/[EXEC](/commands/exec) block, this command behaves exactly like [LMOVE](/commands/lmove).

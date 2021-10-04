@@ -1,24 +1,3 @@
-{
-  "title": "LTRIM",
-  "summary": "Trim a list to the specified range",
-  "group": "list",
-  "tags": [
-    "Command",
-    "List"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of elements to be removed by the operation.",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply",
-  "syntax": "key start stop",
-  "acl_categories": [
-    "list",
-    "write",
-    "slow"
-  ]
-}
-
 Trim an existing list so that it will contain only the specified range of
 elements specified.
 Both `start` and `stop` are zero-based indexes, where `0` is the first element

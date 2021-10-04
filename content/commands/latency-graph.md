@@ -1,24 +1,3 @@
-{
-  "title": "LATENCY GRAPH",
-  "summary": "Return a latency graph for the event.",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.8.13",
-  "return_summary": "@bulk-string-reply",
-  "syntax": "event",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Produces an ASCII-art style graph for the specified event.
 
 [LATENCY GRAPH](/commands/latency-graph) lets you intuitively understand the latency trend of an `event` via state-of-the-art visualization. It can be used for quickly grasping the situation before resorting to means such parsing the raw data from [LATENCY HISTORY](/commands/latency-history) or external tooling.

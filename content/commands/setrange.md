@@ -1,24 +1,3 @@
-{
-  "title": "SETRANGE",
-  "summary": "Overwrite part of a string at key starting at the specified offset",
-  "group": "string",
-  "tags": [
-    "Command",
-    "String"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1), not counting the time taken to copy the new string in place. Usually, this string is very small so the amortized complexity is O(1). Otherwise, complexity is O(M) with M being the length of the value argument.",
-  "since": "2.2.0",
-  "return_summary": "@integer-reply: the length of the string after it was modified by the command.",
-  "syntax": "key offset value",
-  "acl_categories": [
-    "string",
-    "write",
-    "slow"
-  ]
-}
-
 Overwrites part of the string stored at _key_, starting at the specified offset,
 for the entire length of _value_.
 If the offset is larger than the current length of the string at _key_, the

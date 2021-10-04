@@ -1,23 +1,3 @@
-{
-  "title": "WAIT",
-  "summary": "Wait for the synchronous replication of all the write commands sent in the context of the current connection",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@integer-reply: The command returns the number of replicas reached by all the writes performed in the context of the current connection.",
-  "syntax": "numreplicas timeout",
-  "acl_categories": [
-    "connection",
-    "slow"
-  ]
-}
-
 This command blocks the current client until all the previous write commands
 are successfully transferred and acknowledged by at least the specified number
 of replicas. If the timeout, specified in milliseconds, is reached, the command

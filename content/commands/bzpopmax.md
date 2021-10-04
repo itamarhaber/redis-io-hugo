@@ -1,31 +1,3 @@
-{
-  "title": "BZPOPMAX",
-  "summary": "Remove and return the member with the highest score from one or more sorted sets, or block until one is available",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)) with N being the number of elements in the sorted set.",
-  "since": "5.0.0",
-  "return_summary": "@array-reply: specifically:\n\n* A `nil` multi-bulk when no element could be popped and the timeout expired.\n* A three-element multi-bulk with the first element being the name of the key\n  where a member was popped, the second element is the popped member itself,\n  and the third element is the score of the popped element.",
-  "history": [
-    [
-      "6.0",
-      "`timeout` is interpreted as a double instead of an integer."
-    ]
-  ],
-  "syntax": "key ... timeout",
-  "acl_categories": [
-    "sortedset",
-    "blocking",
-    "write",
-    "slow"
-  ]
-}
-
 [BZPOPMAX](/commands/bzpopmax) is the blocking variant of the sorted set [ZPOPMAX](/commands/zpopmax) primitive.
 
 It is the blocking version because it blocks the connection when there are no

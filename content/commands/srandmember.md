@@ -1,29 +1,3 @@
-{
-  "title": "SRANDMEMBER",
-  "summary": "Get one or multiple random members from a set",
-  "group": "set",
-  "tags": [
-    "Command",
-    "Set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "Without the count argument O(1), otherwise O(N) where N is the absolute value of the passed count.",
-  "since": "1.0.0",
-  "return_summary": "@bulk-string-reply: without the additional `count` argument, the command returns a Bulk Reply with the randomly selected element, or `nil` when `key` does not exist.\n\n@array-reply: when the additional `count` argument is passed, the command returns an array of elements, or an empty array when `key` does not exist.",
-  "history": [
-    [
-      "2.6.0",
-      "Added the optional `count` argument."
-    ]
-  ],
-  "syntax": "key [count]",
-  "acl_categories": [
-    "set",
-    "slow"
-  ]
-}
-
 When called with just the `key` argument, return a random element from the set value stored at `key`.
 
 If the provided `count` argument is positive, return an array of **distinct elements**.

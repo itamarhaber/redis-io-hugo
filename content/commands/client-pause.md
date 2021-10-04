@@ -1,35 +1,3 @@
-{
-  "title": "CLIENT PAUSE",
-  "summary": "Stop processing commands from clients for some time",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "2.9.50",
-  "return_summary": "@simple-string-reply: The command returns OK or an error if the timeout is invalid.",
-  "history": [
-    [
-      "3.2.10",
-      "Client pause prevents client pause and key eviction as well."
-    ],
-    [
-      "6.2",
-      "CLIENT PAUSE WRITE mode added along with the `mode` option."
-    ]
-  ],
-  "syntax": "timeout [WRITE|ALL]",
-  "acl_categories": [
-    "connection",
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 [CLIENT PAUSE](/commands/client-pause) is a connections control command able to suspend all the Redis clients for the specified amount of time (in milliseconds).
 
 The command performs the following actions:

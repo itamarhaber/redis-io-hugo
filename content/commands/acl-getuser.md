@@ -1,30 +1,3 @@
-{
-  "title": "ACL GETUSER",
-  "summary": "Get the rules for a specific ACL user",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N). Where N is the number of password, command and pattern rules that the user has.",
-  "since": "6.0.0",
-  "return_summary": "<summary>",
-  "history": [
-    [
-      "6.2",
-      "Added Pub/Sub channel patterns."
-    ]
-  ],
-  "syntax": "username",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command returns all the rules defined for an existing ACL user.
 
 Specifically, it lists the user's ACL flags, password hashes and key name

@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER NODES",
-  "summary": "Get Cluster config for the node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the total number of Cluster nodes",
-  "since": "3.0.0",
-  "return_summary": "@bulk-string-reply: The serialized cluster configuration.\n\n**A note about the word slave used in this man page and command name**: Starting with Redis 5, if not for backward compatibility, the Redis project no longer uses the word slave. Unfortunately in this command the word slave is part of the protocol, so we'll be able to remove such occurrences only when this API will be naturally deprecated.",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Each node in a Redis Cluster has its view of the current cluster configuration,
 given by the set of known nodes, the state of the connection we have with such
 nodes, their flags, properties and assigned slots, and so forth.

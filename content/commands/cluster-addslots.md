@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER ADDSLOTS",
-  "summary": "Assign new hash slots to receiving node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the total number of hash slot arguments",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was successful. Otherwise an error is returned.",
-  "syntax": "slot ...",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 This command is useful in order to modify a node's view of the cluster
 configuration. Specifically it assigns a set of hash slots to the node
 receiving the command. If the command is successful, the node will map

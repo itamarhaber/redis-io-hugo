@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER INFO",
-  "summary": "Provides info about Redis Cluster node state",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@bulk-string-reply: A map between named fields and values in the form of `<field>:<value>` lines separated by newlines composed by the two bytes `CRLF`.",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 [CLUSTER INFO](/commands/cluster-info) provides [INFO](/commands/info) style information about Redis Cluster
 vital parameters. The following is a sample output, followed by the
 description of each field reported.

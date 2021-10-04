@@ -1,24 +1,3 @@
-{
-  "title": "CONFIG REWRITE",
-  "summary": "Rewrite the configuration file with the in memory configuration",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.8.0",
-  "return_summary": "@simple-string-reply: `OK` when the configuration was rewritten properly.\nOtherwise an error is returned.",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [CONFIG REWRITE](/commands/config-rewrite) command rewrites the `redis.conf` file the server was started with, applying the minimal changes needed to make it reflect the configuration currently used by the server, which may be different compared to the original one because of the use of the [CONFIG SET](/commands/config-set) command.
 
 The rewrite is performed in a very conservative way:

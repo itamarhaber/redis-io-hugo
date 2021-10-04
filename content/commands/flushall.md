@@ -1,35 +1,3 @@
-{
-  "title": "FLUSHALL",
-  "summary": "Remove all keys from all databases",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the total number of keys in all databases",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply",
-  "history": [
-    [
-      "4.0.0",
-      "Added the `ASYNC` flushing mode modifier."
-    ],
-    [
-      "6.2.0",
-      "Added the `!SYNC` flushing mode modifier and the **lazyfree-lazy-user-flush** configuration directive."
-    ]
-  ],
-  "syntax": "[ASYNC|SYNC]",
-  "acl_categories": [
-    "keyspace",
-    "dangerous",
-    "write",
-    "slow"
-  ]
-}
-
 Delete all the keys of all the existing databases, not just the currently selected one.
 This command never fails.
 

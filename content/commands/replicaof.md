@@ -1,24 +1,3 @@
-{
-  "title": "REPLICAOF",
-  "summary": "Make the server a replica of another instance, or promote it as master.",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "5.0.0",
-  "return_summary": "@simple-string-reply",
-  "syntax": "host port",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [REPLICAOF](/commands/replicaof) command can change the replication settings of a replica on the fly.
 
 If a Redis server is already acting as replica, the command [REPLICAOF](/commands/replicaof) NO ONE will turn off the replication, turning the Redis server into a MASTER.  In the proper form [REPLICAOF](/commands/replicaof) hostname port will make the server a replica of another server listening at the specified hostname and port.

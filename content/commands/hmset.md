@@ -1,25 +1,3 @@
-{
-  "title": "HMSET",
-  "summary": "Set multiple hash fields to multiple values",
-  "group": "hash",
-  "tags": [
-    "Command",
-    "Hash"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of fields being set.",
-  "since": "2.0.0",
-  "return_summary": "@simple-string-reply",
-  "deprecated": true,
-  "syntax": "key field value ...",
-  "acl_categories": [
-    "hash",
-    "write",
-    "slow"
-  ]
-}
-
 Sets the specified fields to their respective values in the hash stored at
 `key`.
 This command overwrites any specified fields already existing in the hash.

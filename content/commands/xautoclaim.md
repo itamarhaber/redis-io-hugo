@@ -1,24 +1,3 @@
-{
-  "title": "XAUTOCLAIM",
-  "summary": "Changes (or acquires) ownership of messages in a consumer group, as if the messages were delivered to the specified consumer.",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) if COUNT is small.",
-  "since": "6.2.0",
-  "return_summary": "@array-reply, specifically:\n\nAn array with two elements:\n\n1. The first element is a stream ID to be used as the `<start>` argument for the next call to `XAUTOCLAIM`\n2. The second element is an array containing all the successfully claimed messages in the same format as `XRANGE`.",
-  "syntax": "key group consumer min-idle-time start [COUNT count] [JUSTID]",
-  "acl_categories": [
-    "stream",
-    "write",
-    "slow"
-  ]
-}
-
 This command transfers ownership of pending stream entries that match the specified criteria. Conceptually, [XAUTOCLAIM](/commands/xautoclaim)  is equivalent to calling [XPENDING](/commands/xpending) and then [XCLAIM](/commands/xclaim),
 but provides a more straightforward way to deal with message delivery failures via [SCAN](/commands/scan)-like semantics.
 

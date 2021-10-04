@@ -1,23 +1,3 @@
-{
-  "title": "HRANDFIELD",
-  "summary": "Get one or multiple random fields from a hash",
-  "group": "hash",
-  "tags": [
-    "Command",
-    "Hash"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of fields returned",
-  "since": "6.2.0",
-  "return_summary": "@bulk-string-reply: without the additional `count` argument, the command returns a Bulk Reply with the randomly selected field, or `nil` when `key` does not exist.\n\n@array-reply: when the additional `count` argument is passed, the command returns an array of fields, or an empty array when `key` does not exist.\nIf the `WITHVALUES` modifier is used, the reply is a list fields and their values from the hash.",
-  "syntax": "key [count [WITHVALUES]]",
-  "acl_categories": [
-    "hash",
-    "slow"
-  ]
-}
-
 When called with just the `key` argument, return a random field from the hash value stored at `key`.
 
 If the provided `count` argument is positive, return an array of **distinct fields**.

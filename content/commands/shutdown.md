@@ -1,24 +1,3 @@
-{
-  "title": "SHUTDOWN",
-  "summary": "Synchronously save the dataset to disk and then shut down the server",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply on error.\nOn success nothing is returned since the server quits and the connection is\nclosed.",
-  "syntax": "[NOSAVE|SAVE]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command behavior is the following:
 
 * Stop all the clients.

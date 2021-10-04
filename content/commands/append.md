@@ -1,24 +1,3 @@
-{
-  "title": "APPEND",
-  "summary": "Append a value to a key",
-  "group": "string",
-  "tags": [
-    "Command",
-    "String"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1). The amortized time complexity is O(1) assuming the appended value is small and the already present value is of any size, since the dynamic string library used by Redis will double the free space available on every reallocation.",
-  "since": "2.0.0",
-  "return_summary": "@integer-reply: the length of the string after the append operation.",
-  "syntax": "key value",
-  "acl_categories": [
-    "string",
-    "write",
-    "slow"
-  ]
-}
-
 If `key` already exists and is a string, this command appends the `value` at the
 end of the string.
 If `key` does not exist it is created and set as an empty string, so [APPEND](/commands/append)

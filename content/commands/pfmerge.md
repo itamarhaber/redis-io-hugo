@@ -1,24 +1,3 @@
-{
-  "title": "PFMERGE",
-  "summary": "Merge N different HyperLogLogs into a single one.",
-  "group": "hyperloglog",
-  "tags": [
-    "Command",
-    "Hyperloglog"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) to merge N HyperLogLogs, but with high constant times.",
-  "since": "2.8.9",
-  "return_summary": "@simple-string-reply: The command just returns `OK`.",
-  "syntax": "destkey sourcekey ...",
-  "acl_categories": [
-    "hyperloglog",
-    "write",
-    "slow"
-  ]
-}
-
 Merge multiple HyperLogLog values into an unique value that will approximate
 the cardinality of the union of the observed Sets of the source HyperLogLog
 structures.

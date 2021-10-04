@@ -1,29 +1,3 @@
-{
-  "title": "XPENDING",
-  "summary": "Return information and entries from a stream consumer group pending entries list, that are messages fetched but never acknowledged.",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) with N being the number of elements returned, so asking for a small fixed number of entries per call is O(1). O(M), where M is the total number of entries scanned when used with the IDLE filter. When the command returns just the summary and the list of consumers is small, it runs in O(1) time; otherwise, an additional O(N) time for iterating every consumer.",
-  "since": "5.0.0",
-  "return_summary": "@array-reply, specifically:\n\nThe command returns data in different format depending on the way it is\ncalled, as previously explained in this page. However the reply is always\nan array of items.",
-  "history": [
-    [
-      "6.2.0",
-      "Added the `IDLE` option and exclusive range intervals."
-    ]
-  ],
-  "syntax": "key group [[IDLE min-idle-time] start end count [consumer]]",
-  "acl_categories": [
-    "stream",
-    "slow"
-  ]
-}
-
 Fetching data from a stream via a consumer group, and not acknowledging
 such data, has the effect of creating *pending entries*. This is
 well explained in the [XREADGROUP](/commands/xreadgroup) command, and even better in our

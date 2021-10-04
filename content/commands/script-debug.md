@@ -1,23 +1,3 @@
-{
-  "title": "SCRIPT DEBUG",
-  "summary": "Set the debug mode for executed scripts.",
-  "group": "scripting",
-  "tags": [
-    "Command",
-    "Scripting"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.2.0",
-  "return_summary": "@simple-string-reply: `OK`.",
-  "syntax": "YES|SYNC|NO",
-  "acl_categories": [
-    "scripting",
-    "slow"
-  ]
-}
-
 Set the debug mode for subsequent scripts executed with [EVAL](/commands/eval). Redis includes a
 complete Lua debugger, codename LDB, that can be used to make the task of
 writing complex scripts much simpler. In debug mode Redis acts as a remote

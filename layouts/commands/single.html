@@ -5,7 +5,7 @@
 
 <div class="command-single">
   <h1 class="command-title">
-    {{ .Title }} {{ partial "commands/arguments" $cdata.arguments }}
+    {{ $cname }} {{ partial "commands/arguments" $cdata.arguments }}
   </h1>
   <section id="main" class="command-main">
     <div class="command-metadata">
@@ -46,52 +46,29 @@
   </section>
 
   <aside class="command-related">
-    <h2>Related commands</h2>
     {{ $me := .RelPermalink }}
+    <h2>{{ index $.Site.Data.group (default $cdata.group "string") }} commands</h2>
     <ul>
-      {{ range where .Site.Pages "Params.group" $cdata.group}}
-      <li>
-        {{ if eq $me .RelPermalink }}
-        <strong>
+      {{ range where $.Site.Pages "Section" "commands" }}
+        {{ $rcname := "" }}
+        {{ with .File }}
+          {{ $rcname = replace (upper .TranslationBaseName) "-" " " 1 }}
         {{ end }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ if eq $me .RelPermalink }}
-        </strong>
+        {{ $rcdata := index $.Site.Data.commands $rcname }}
+        {{ if eq $rcdata.group $cdata.group }}
+          <li>
+            {{ if eq $me .RelPermalink }}
+            <strong>
+            {{ end }}
+            <a href="{{ .RelPermalink }}">{{ $rcname }}</a>
+            {{ if eq $me .RelPermalink }}
+            </strong>
+            {{ end }}
+          </li>
         {{ end }}
-      </li>
       {{ end }}
     </ul>
   </aside>
 
-  <aside class="command-meta">
-    <div>
-      <section>
-        <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-        <h5 id="wordcount"> {{ .WordCount }} Words </h5>
-      </section>
-      {{ with $cdata.topics }}
-      <ul id="topics">
-        {{ range . }}
-        <li><a href="{{ " topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
-        {{ end }}
-      </ul>
-      {{ end }}
-      {{ with $cdata.tags }}
-      <ul id="tags">
-        {{ range . }}
-        <li> <a href="{{ " tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
-        {{ end }}
-      </ul>
-      {{ end }}
-    </div>
-    <div>
-      {{ with .PrevInSection }}
-      <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-      {{ end }}
-      {{ with .NextInSection }}
-      <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-      {{ end }}
-    </div>
-  </aside>
 </div>
 {{ end }}

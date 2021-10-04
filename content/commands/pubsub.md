@@ -1,23 +1,3 @@
-{
-  "title": "PUBSUB",
-  "summary": "Inspect the state of the Pub/Sub subsystem",
-  "group": "pubsub",
-  "tags": [
-    "Command",
-    "Pubsub"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) for the CHANNELS subcommand, where N is the number of active channels, and assuming constant time pattern matching (relatively short channels and patterns). O(N) for the NUMSUB subcommand, where N is the number of requested channels. O(1) for the NUMPAT subcommand.",
-  "since": "2.8.0",
-  "return_summary": "@integer-reply: the number of patterns all the clients are subscribed to.",
-  "syntax": "subcommand [argument ...]",
-  "acl_categories": [
-    "pubsub",
-    "slow"
-  ]
-}
-
 The PUBSUB command is an introspection command that allows to inspect the
 state of the Pub/Sub subsystem. It is composed of subcommands that are
 documented separately. The general form is:

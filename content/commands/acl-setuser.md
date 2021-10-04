@@ -1,30 +1,3 @@
-{
-  "title": "ACL SETUSER",
-  "summary": "Modify or create the rules for a specific ACL user",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N). Where N is the number of rules provided.",
-  "since": "6.0.0",
-  "return_summary": "@simple-string-reply: `OK` on success.\n\nIf the rules contain errors, the error is returned.",
-  "history": [
-    [
-      "6.2",
-      "Added Pub/Sub channel patterns."
-    ]
-  ],
-  "syntax": "username [rule ...]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Create an ACL user with the specified rules or modify the rules of an
 existing user. This is the main interface in order to manipulate Redis ACL
 users interactively: if the username does not exist, the command creates

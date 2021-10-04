@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER KEYSLOT",
-  "summary": "Returns the hash slot of the specified key",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of bytes in the key",
-  "since": "3.0.0",
-  "return_summary": "@integer-reply: The hash slot number.",
-  "syntax": "key",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Returns an integer identifying the hash slot the specified key hashes to.
 This command is mainly useful for debugging and testing, since it exposes
 via an API the underlying Redis implementation of the hashing algorithm.

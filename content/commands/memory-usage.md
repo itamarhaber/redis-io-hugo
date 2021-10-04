@@ -1,22 +1,3 @@
-{
-  "title": "MEMORY USAGE",
-  "summary": "Estimate the memory usage of a key",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of samples.",
-  "since": "4.0.0",
-  "return_summary": "@integer-reply: the memory usage in bytes, or `nil` when the key does not exist.",
-  "syntax": "key [SAMPLES count]",
-  "acl_categories": [
-    "slow"
-  ]
-}
-
 The [MEMORY USAGE](/commands/memory-usage) command reports the number of bytes that a key and its value
 require to be stored in RAM.
 

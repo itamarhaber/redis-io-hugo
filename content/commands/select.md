@@ -1,23 +1,3 @@
-{
-  "title": "SELECT",
-  "summary": "Change the selected database for the current connection",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply",
-  "syntax": "index",
-  "acl_categories": [
-    "connection",
-    "slow"
-  ]
-}
-
 Select the Redis logical database having the specified zero-based numeric index.
 New connections always use the database 0.
 

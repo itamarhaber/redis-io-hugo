@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER SAVECONFIG",
-  "summary": "Forces the node to save cluster state on disk",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` or an error if the operation fails.",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Forces a node to save the `nodes.conf` configuration on disk. Before to return
 the command calls `fsync(2)` in order to make sure the configuration is
 flushed on the computer disk.

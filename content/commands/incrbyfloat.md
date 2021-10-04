@@ -1,24 +1,3 @@
-{
-  "title": "INCRBYFLOAT",
-  "summary": "Increment the float value of a key by the given amount",
-  "group": "string",
-  "tags": [
-    "Command",
-    "String"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "2.6.0",
-  "return_summary": "@bulk-string-reply: the value of `key` after the increment.",
-  "syntax": "key increment",
-  "acl_categories": [
-    "string",
-    "write",
-    "slow"
-  ]
-}
-
 Increment the string representing a floating point number stored at `key` by the
 specified `increment`. By using a negative `increment` value, the result is
 that the value stored at the key is decremented (by the obvious properties

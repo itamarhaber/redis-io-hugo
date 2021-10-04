@@ -1,24 +1,3 @@
-{
-  "title": "SLOWLOG",
-  "summary": "Manages the Redis slow queries log",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.2.12",
-  "return_summary": "<summary>",
-  "syntax": "subcommand [argument]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 This command is used in order to read and reset the Redis slow queries log.
 
 ## Redis slow log overview

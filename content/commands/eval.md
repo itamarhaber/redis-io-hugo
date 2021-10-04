@@ -1,23 +1,3 @@
-{
-  "title": "EVAL",
-  "summary": "Execute a Lua script server side",
-  "group": "scripting",
-  "tags": [
-    "Command",
-    "Scripting"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "Depends on the script that is executed.",
-  "since": "2.6.0",
-  "return_summary": "<summary>",
-  "syntax": "script numkeys [key ...] [arg ...]",
-  "acl_categories": [
-    "scripting",
-    "slow"
-  ]
-}
-
 ## Introduction to EVAL
 
 [EVAL](/commands/eval) and [EVALSHA](/commands/evalsha) are used to evaluate scripts using the Lua interpreter

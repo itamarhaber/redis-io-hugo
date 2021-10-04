@@ -1,23 +1,3 @@
-{
-  "title": "BITPOS",
-  "summary": "Find first bit set or clear in a string",
-  "group": "bitmap",
-  "tags": [
-    "Command",
-    "Bitmap"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N)",
-  "since": "2.8.7",
-  "return_summary": "@integer-reply\n\nThe command returns the position of the first bit set to 1 or 0 according to the request.\n\nIf we look for set bits (the bit argument is 1) and the string is empty or composed of just zero bytes, -1 is returned.\n\nIf we look for clear bits (the bit argument is 0) and the string only contains bit set to 1, the function returns the first bit not part of the string on the right. So if the string is three bytes set to the value `0xff` the command `BITPOS key 0` will return 24, since up to bit 23 all the bits are 1.\n\nBasically, the function considers the right of the string as padded with zeros if you look for clear bits and specify no range or the _start_ argument **only**.\n\nHowever, this behavior changes if you are looking for clear bits and specify a range with both __start__ and __end__. If no clear bit is found in the specified range, the function returns -1 as the user specified a clear range and there are no 0 bits in that range.",
-  "syntax": "key bit [start [end]]",
-  "acl_categories": [
-    "bitmap",
-    "slow"
-  ]
-}
-
 Return the position of the first bit set to 1 or 0 in a string.
 
 The position is returned, thinking of the string as an array of bits from left to

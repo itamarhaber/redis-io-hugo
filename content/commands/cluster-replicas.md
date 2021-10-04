@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER REPLICAS",
-  "summary": "List replica nodes of the specified master node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "5.0.0",
-  "return_summary": "The command returns data in the same format as `CLUSTER NODES`.",
-  "syntax": "node-id",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command provides a list of replica nodes replicating from the specified
 master node. The list is provided in the same format used by [CLUSTER NODES](/commands/cluster-nodes) (please refer to its documentation for the specification of the format).
 

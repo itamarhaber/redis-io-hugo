@@ -1,30 +1,3 @@
-{
-  "title": "RPUSH",
-  "summary": "Append one or multiple elements to a list",
-  "group": "list",
-  "tags": [
-    "Command",
-    "List"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) for each element added, so O(N) to add N elements when the command is called with multiple arguments.",
-  "since": "1.0.0",
-  "return_summary": "@integer-reply: the length of the list after the push operation.",
-  "history": [
-    [
-      "2.4",
-      "Accepts multiple `element` arguments."
-    ]
-  ],
-  "syntax": "key element ...",
-  "acl_categories": [
-    "list",
-    "write",
-    "slow"
-  ]
-}
-
 Insert all the specified values at the tail of the list stored at `key`.
 If `key` does not exist, it is created as empty list before performing the push
 operation.

@@ -1,25 +1,3 @@
-{
-  "title": "CLIENT SETNAME",
-  "summary": "Set the current connection name",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "2.6.9",
-  "return_summary": "@simple-string-reply: `OK` if the connection name was successfully set.",
-  "syntax": "connection-name",
-  "acl_categories": [
-    "connection",
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [CLIENT SETNAME](/commands/client-setname) command assigns a name to the current connection.
 
 The assigned name is displayed in the output of [CLIENT LIST](/commands/client-list) so that it is possible to identify the client that performed a given connection.

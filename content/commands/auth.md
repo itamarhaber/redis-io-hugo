@@ -1,29 +1,3 @@
-{
-  "title": "AUTH",
-  "summary": "Authenticate to the server",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply or an error if the password, or username/password pair, is invalid.",
-  "history": [
-    [
-      "6.0.0",
-      "Added ACL style (username and password)."
-    ]
-  ],
-  "syntax": "[username] password",
-  "acl_categories": [
-    "connection",
-    "slow"
-  ]
-}
-
 The AUTH command authenticates the current connection in two cases:
 
 1. If the Redis server is password protected via the `requirepass` option.

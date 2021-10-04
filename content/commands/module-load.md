@@ -1,24 +1,3 @@
-{
-  "title": "MODULE LOAD",
-  "summary": "Load a module",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "4.0.0",
-  "return_summary": "@simple-string-reply: `OK` if module was loaded.",
-  "syntax": "path [arg]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Loads a module from a dynamic library at runtime.
 
 This command loads and initializes the Redis module from the dynamic library

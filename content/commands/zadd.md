@@ -1,38 +1,3 @@
-{
-  "title": "ZADD",
-  "summary": "Add one or more members to a sorted set, or update its score if it already exists",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)) for each item added, where N is the number of elements in the sorted set.",
-  "since": "1.2.0",
-  "return_summary": "@integer-reply, specifically:\n\n* When used without optional arguments, the number of elements added to the sorted set (excluding score updates).\n* If the `CH` option is specified, the number of elements that were changed (added or updated).\n\nIf the `INCR` option is specified, the return value will be @bulk-string-reply:\n\n* The new score of `member` (a double precision floating point number) represented as string, or `nil` if the operation was aborted (when called with either the `XX` or the `NX` option).",
-  "history": [
-    [
-      "2.4",
-      "Accepts multiple elements."
-    ],
-    [
-      "3.0.2",
-      "Added the `XX`, `NX`, `CH` and `INCR` options."
-    ],
-    [
-      "6.2",
-      "Added the `GT` and `LT` options."
-    ]
-  ],
-  "syntax": "key [NX|XX] [GT|LT] [CH] [INCR] score member ...",
-  "acl_categories": [
-    "sortedset",
-    "write",
-    "slow"
-  ]
-}
-
 Adds all the specified members with the specified scores to the sorted set
 stored at `key`.
 It is possible to specify multiple score / member pairs.

@@ -1,24 +1,3 @@
-{
-  "title": "XDEL",
-  "summary": "Removes the specified entries from the stream. Returns the number of items actually deleted, that may be different from the number of IDs passed in case certain IDs do not exist.",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) for each single item to delete in the stream, regardless of the stream size.",
-  "since": "5.0.0",
-  "return_summary": "@integer-reply: the number of entries actually deleted.",
-  "syntax": "key ID ...",
-  "acl_categories": [
-    "stream",
-    "write",
-    "slow"
-  ]
-}
-
 Removes the specified entries from a stream, and returns the number of entries
 deleted, that may be different from the number of IDs passed to the command in
 case certain IDs do not exist.

@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER COUNT-FAILURE-REPORTS",
-  "summary": "Return the number of failure reports active for a given node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of failure reports",
-  "since": "3.0.0",
-  "return_summary": "@integer-reply: the number of active failure reports for the node.",
-  "syntax": "node-id",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command returns the number of *failure reports* for the specified node.
 Failure reports are the way Redis Cluster uses in order to promote a
 `PFAIL` state, that means a node is not reachable, to a `FAIL` state,

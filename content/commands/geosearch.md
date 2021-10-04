@@ -1,24 +1,3 @@
-{
-  "title": "GEOSEARCH",
-  "summary": "Query a sorted set representing a geospatial index to fetch members inside an area of a box or a circle.",
-  "group": "geo",
-  "tags": [
-    "Command",
-    "Geo"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N+log(M)) where N is the number of elements in the grid-aligned bounding box area around the shape provided as the filter and M is the number of items inside the shape",
-  "since": "6.2",
-  "return_summary": "@array-reply, specifically:\n\n* Without any `WITH` option specified, the command just returns a linear array like [\"New York\",\"Milan\",\"Paris\"].\n* If `WITHCOORD`, `WITHDIST` or `WITHHASH` options are specified, the command returns an array of arrays, where each sub-array represents a single item.\n\nWhen additional information is returned as an array of arrays for each item, the first item in the sub-array is always the name of the returned item. The other information is returned in the following order as successive elements of the sub-array.\n\n1. The distance from the center as a floating point number, in the same unit specified in the shape.\n2. The geohash integer.\n3. The coordinates as a two items x,y array (longitude,latitude).",
-  "deprecated": true,
-  "syntax": "key [FROMMEMBER member] [FROMLONLAT longitude latitude] [BYRADIUS radius m|km|ft|mi] [BYBOX width height m|km|ft|mi] [ASC|DESC] [COUNT count [ANY]] [WITHCOORD] [WITHDIST] [WITHHASH]",
-  "acl_categories": [
-    "geo",
-    "slow"
-  ]
-}
-
 Return the members of a sorted set populated with geospatial information using [GEOADD](/commands/geoadd), which are within the borders of the area specified by a given shape. This command extends the [GEORADIUS](/commands/georadius) command, so in addition to searching within circular areas, it supports searching within rectangular areas.
 
 This command should be used in place of the deprecated [GEORADIUS](/commands/georadius) and [GEORADIUSBYMEMBER](/commands/georadiusbymember) commands.

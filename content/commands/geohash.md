@@ -1,23 +1,3 @@
-{
-  "title": "GEOHASH",
-  "summary": "Returns members of a geospatial index as standard geohash strings",
-  "group": "geo",
-  "tags": [
-    "Command",
-    "Geo"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)) for each member requested, where N is the number of elements in the sorted set.",
-  "since": "3.2.0",
-  "return_summary": "@array-reply, specifically:\n\nThe command returns an array where each element is the Geohash corresponding to\neach member name passed as argument to the command.",
-  "syntax": "key member ...",
-  "acl_categories": [
-    "geo",
-    "slow"
-  ]
-}
-
 Return valid [Geohash](https://en.wikipedia.org/wiki/Geohash) strings representing the position of one or more elements in a sorted set value representing a geospatial index (where elements were added using [GEOADD](/commands/geoadd)).
 
 Normally Redis represents positions of elements using a variation of the Geohash

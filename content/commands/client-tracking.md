@@ -1,25 +1,3 @@
-{
-  "title": "CLIENT TRACKING",
-  "summary": "Enable or disable server assisted client side caching support",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1). Some options may introduce additional complexity.",
-  "since": "6.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the connection was successfully put in tracking mode or if the tracking mode was successfully disabled. Otherwise an error is returned.",
-  "syntax": "ON|OFF [REDIRECT client-id] [PREFIX prefix ...] [BCAST] [OPTIN] [OPTOUT] [NOLOOP]",
-  "acl_categories": [
-    "connection",
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 This command enables the tracking feature of the Redis server, that is used
 for [server assisted client side caching](/topics/client-side-caching).
 

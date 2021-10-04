@@ -1,23 +1,3 @@
-{
-  "title": "PING",
-  "summary": "Ping the server",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply",
-  "syntax": "[message]",
-  "acl_categories": [
-    "connection",
-    "slow"
-  ]
-}
-
 Returns `PONG` if no argument is provided, otherwise return a copy of the
 argument as a bulk.
 This command is often used to test if a connection is still alive, or to measure

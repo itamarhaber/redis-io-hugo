@@ -1,24 +1,3 @@
-{
-  "title": "BGREWRITEAOF",
-  "summary": "Asynchronously rewrite the append-only file",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply: A simple string reply indicating that the rewriting started or is about to start ASAP, when the call is executed with success.\n\nThe command may reply with an error in certain cases, as documented above.",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Instruct Redis to start an [Append Only File][tpaof] rewrite process.
 The rewrite will create a small optimized version of the current Append Only
 File.

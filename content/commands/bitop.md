@@ -1,24 +1,3 @@
-{
-  "title": "BITOP",
-  "summary": "Perform bitwise operations between strings",
-  "group": "bitmap",
-  "tags": [
-    "Command",
-    "Bitmap"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N)",
-  "since": "2.6.0",
-  "return_summary": "@integer-reply\n\nThe size of the string stored in the destination key, that is equal to the\nsize of the longest input string.",
-  "syntax": "operation destkey key ...",
-  "acl_categories": [
-    "bitmap",
-    "write",
-    "slow"
-  ]
-}
-
 Perform a bitwise operation between multiple keys (containing string values) and
 store the result in the destination key.
 

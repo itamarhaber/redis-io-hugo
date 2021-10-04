@@ -1,24 +1,3 @@
-{
-  "title": "LREM",
-  "summary": "Remove elements from a list",
-  "group": "list",
-  "tags": [
-    "Command",
-    "List"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N+M) where N is the length of the list and M is the number of elements removed.",
-  "since": "1.0.0",
-  "return_summary": "@integer-reply: the number of removed elements.",
-  "syntax": "key count element",
-  "acl_categories": [
-    "list",
-    "write",
-    "slow"
-  ]
-}
-
 Removes the first `count` occurrences of elements equal to `element` from the list
 stored at `key`.
 The `count` argument influences the operation in the following ways:

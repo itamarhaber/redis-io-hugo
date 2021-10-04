@@ -1,23 +1,3 @@
-{
-  "title": "BITCOUNT",
-  "summary": "Count set bits in a string",
-  "group": "bitmap",
-  "tags": [
-    "Command",
-    "Bitmap"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N)",
-  "since": "2.6.0",
-  "return_summary": "@integer-reply\n\nThe number of bits set to 1.",
-  "syntax": "key [start end]",
-  "acl_categories": [
-    "bitmap",
-    "slow"
-  ]
-}
-
 Count the number of set bits (population counting) in a string.
 
 By default all the bytes contained in the string are examined.

@@ -1,24 +1,3 @@
-{
-  "title": "LATENCY HISTORY",
-  "summary": "Return timestamp-latency samples for the event.",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.8.13",
-  "return_summary": "@array-reply: specifically:\n\nThe command returns an array where each element is a two elements array\nrepresenting the timestamp and the latency of the event.",
-  "syntax": "event",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [LATENCY HISTORY](/commands/latency-history) command returns the raw data of the `event`'s latency spikes time series.
 
 This is useful to an application that wants to fetch raw data in order to perform monitoring, display graphs, and so forth.

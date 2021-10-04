@@ -1,22 +1,3 @@
-{
-  "title": "LOLWUT",
-  "summary": "Display some computer art and the Redis version",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "5.0.0",
-  "return_summary": "@bulk-string-reply (or verbatim reply when using the RESP3 protocol): the string containing the generative computer art, and a text with the Redis version.",
-  "syntax": "[VERSION version]",
-  "acl_categories": [
-    "slow"
-  ]
-}
-
 The LOLWUT command displays the Redis version: however as a side effect of
 doing so, it also creates a piece of generative computer art that is different
 with each version of Redis. The command was introduced in Redis 5 and announced

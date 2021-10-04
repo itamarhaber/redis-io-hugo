@@ -1,23 +1,3 @@
-{
-  "title": "COMMAND GETKEYS",
-  "summary": "Extract keys given a full Redis command",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of arguments to the command",
-  "since": "2.8.13",
-  "return_summary": "@array-reply: list of keys from your command.",
-  "syntax": "",
-  "acl_categories": [
-    "connection",
-    "slow"
-  ]
-}
-
 Returns @array-reply of keys from a full Redis command.
 
 [COMMAND GETKEYS](/commands/command-getkeys) is a helper command to let you find the keys

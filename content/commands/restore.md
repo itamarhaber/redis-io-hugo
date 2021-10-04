@@ -1,25 +1,3 @@
-{
-  "title": "RESTORE",
-  "summary": "Create a key using the provided serialized value, previously obtained using DUMP.",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) to create the new key and additional O(N*M) to reconstruct the serialized value, where N is the number of Redis objects composing the value and M their average size. For small string values the time complexity is thus O(1)+O(1*M) where M is small, so simply O(1). However for sorted set values the complexity is O(N*M*log(N)) because inserting values into sorted sets is O(log(N)).",
-  "since": "2.6.0",
-  "return_summary": "@simple-string-reply: The command returns OK on success.",
-  "syntax": "key ttl serialized-value [REPLACE] [ABSTTL] [IDLETIME seconds] [FREQ frequency]",
-  "acl_categories": [
-    "keyspace",
-    "dangerous",
-    "write",
-    "slow"
-  ]
-}
-
 Create a key associated with a value that is obtained by deserializing the
 provided serialized value (obtained via [DUMP](/commands/dump)).
 

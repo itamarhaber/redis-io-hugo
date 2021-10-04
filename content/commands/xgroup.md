@@ -1,24 +1,3 @@
-{
-  "title": "XGROUP",
-  "summary": "Create, destroy, and manage consumer groups.",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) for all the subcommands, with the exception of the DESTROY subcommand which takes an additional O(M) time in order to delete the M entries inside the consumer group pending entries list (PEL).",
-  "since": "5.0.0",
-  "return_summary": "<summary>",
-  "syntax": "[CREATE key groupname ID|$ [MKSTREAM]] [SETID key groupname ID|$] [DESTROY key groupname] [CREATECONSUMER key groupname consumername] [DELCONSUMER key groupname consumername]",
-  "acl_categories": [
-    "stream",
-    "write",
-    "slow"
-  ]
-}
-
 This command is used in order to manage the consumer groups associated
 with a stream data structure. Using [XGROUP](/commands/xgroup) you can:
 

@@ -1,29 +1,3 @@
-{
-  "title": "XINFO",
-  "summary": "Get information on streams and consumer groups",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) with N being the number of returned items for the subcommands CONSUMERS and GROUPS. The STREAM subcommand is O(log N) with N being the number of items in the stream.",
-  "since": "5.0.0",
-  "return_summary": "<summary>",
-  "history": [
-    [
-      "6.0.0",
-      "Added the `FULL` option to `XINFO STREAM`."
-    ]
-  ],
-  "syntax": "[CONSUMERS key groupname] [GROUPS key] [STREAM key] [HELP]",
-  "acl_categories": [
-    "stream",
-    "slow"
-  ]
-}
-
 This is an introspection command used in order to retrieve different information
 about the streams and associated consumer groups. Three forms are possible:
 

@@ -1,23 +1,3 @@
-{
-  "title": "ZRANDMEMBER",
-  "summary": "Get one or multiple random elements from a sorted set",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of elements returned",
-  "since": "6.2.0",
-  "return_summary": "@bulk-string-reply: without the additional `count` argument, the command returns a Bulk Reply with the randomly selected element, or `nil` when `key` does not exist.\n\n@array-reply: when the additional `count` argument is passed, the command returns an array of elements, or an empty array when `key` does not exist.\nIf the `WITHSCORES` modifier is used, the reply is a list elements and their scores from the sorted set.",
-  "syntax": "key [count [WITHSCORES]]",
-  "acl_categories": [
-    "sortedset",
-    "slow"
-  ]
-}
-
 When called with just the `key` argument, return a random element from the sorted set value stored at `key`.
 
 If the provided `count` argument is positive, return an array of **distinct elements**.

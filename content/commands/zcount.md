@@ -1,23 +1,3 @@
-{
-  "title": "ZCOUNT",
-  "summary": "Count the members in a sorted set with scores within the given values",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)) with N being the number of elements in the sorted set.",
-  "since": "2.0.0",
-  "return_summary": "@integer-reply: the number of elements in the specified score range.",
-  "syntax": "key min max",
-  "acl_categories": [
-    "sortedset",
-    "slow"
-  ]
-}
-
 Returns the number of elements in the sorted set at `key` with a score between
 `min` and `max`.
 

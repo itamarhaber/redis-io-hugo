@@ -1,23 +1,3 @@
-{
-  "title": "XRANGE",
-  "summary": "Return a range of elements in a stream, with IDs matching the specified IDs interval",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) with N being the number of elements being returned. If N is constant (e.g. always asking for the first 10 elements with COUNT), you can consider it O(1).",
-  "since": "5.0.0",
-  "return_summary": "@array-reply, specifically:\n\nThe command returns the entries with IDs matching the specified range.\nThe returned entries are complete, that means that the ID and all the fields\nthey are composed are returned. Moreover, the entries are returned with\ntheir fields and values in the exact same order as `XADD` added them.",
-  "syntax": "key start end [COUNT count]",
-  "acl_categories": [
-    "stream",
-    "slow"
-  ]
-}
-
 The command returns the stream entries matching a given range of IDs.
 The range is specified by a minimum and maximum ID. All the entries having
 an ID between the two specified or exactly one of the two IDs specified

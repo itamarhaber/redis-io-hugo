@@ -1,24 +1,3 @@
-{
-  "title": "CONFIG SET",
-  "summary": "Set a configuration parameter to the given value",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.0.0",
-  "return_summary": "@simple-string-reply: `OK` when the configuration was set properly.\nOtherwise an error is returned.",
-  "syntax": "parameter value",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [CONFIG SET](/commands/config-set) command is used in order to reconfigure the server at run time
 without the need to restart Redis.
 You can change both trivial parameters or switch from one to another persistence

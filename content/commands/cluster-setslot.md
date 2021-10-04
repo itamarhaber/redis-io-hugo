@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER SETSLOT",
-  "summary": "Bind a hash slot to a specific node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: All the subcommands return `OK` if the command was successful. Otherwise an error is returned.",
-  "syntax": "slot IMPORTING|MIGRATING|STABLE|NODE [node-id]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 [CLUSTER SETSLOT](/commands/cluster-setslot) is responsible of changing the state of a hash slot in the receiving node in different ways. It can, depending on the subcommand used:
 
 1. `MIGRATING` subcommand: Set a hash slot in *migrating* state.

@@ -1,38 +1,3 @@
-{
-  "title": "MONITOR",
-  "summary": "Listen for all requests received by the server in real time",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "**Non standard return value**, just dumps the received commands in an infinite\nflow.",
-  "history": [
-    [
-      "6.0",
-      "`AUTH` excluded from the command's output."
-    ],
-    [
-      "6.2",
-      "`RESET` can be called to exit monitor mode."
-    ],
-    [
-      "6.2.4",
-      "`AUTH`, `HELLO`, `EVAL`, `EVAL_RO`, `EVALSHA` and `EVALSHA_RO` included in the command's output."
-    ]
-  ],
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 [MONITOR](/commands/monitor) is a debugging command that streams back every command processed by
 the Redis server.
 It can help in understanding what is happening to the database.

@@ -1,23 +1,3 @@
-{
-  "title": "RESET",
-  "summary": "Reset the connection",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "6.2",
-  "return_summary": "@simple-string-reply: always 'RESET'.",
-  "syntax": "",
-  "acl_categories": [
-    "connection",
-    "slow"
-  ]
-}
-
 This command performs a full reset of the connection's server-side context, 
 mimicking the effect of disconnecting and reconnecting again.
 

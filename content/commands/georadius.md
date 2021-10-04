@@ -1,31 +1,3 @@
-{
-  "title": "GEORADIUS",
-  "summary": "Query a sorted set representing a geospatial index to fetch members matching a given maximum distance from a point",
-  "group": "geo",
-  "tags": [
-    "Command",
-    "Geo"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N+log(M)) where N is the number of elements inside the bounding box of the circular area delimited by center and radius and M is the number of items inside the index.",
-  "since": "3.2.0",
-  "return_summary": "@array-reply, specifically:\n\n* Without any `WITH` option specified, the command just returns a linear array like [\"New York\",\"Milan\",\"Paris\"].\n* If `WITHCOORD`, `WITHDIST` or `WITHHASH` options are specified, the command returns an array of arrays, where each sub-array represents a single item.\n\nWhen additional information is returned as an array of arrays for each item, the first item in the sub-array is always the name of the returned item. The other information is returned in the following order as successive elements of the sub-array.\n\n1. The distance from the center as a floating point number, in the same unit specified in the radius.\n2. The geohash integer.\n3. The coordinates as a two items x,y array (longitude,latitude).\n\nSo for example the command `GEORADIUS Sicily 15 37 200 km WITHCOORD WITHDIST` will return each item in the following way:\n\n    [\"Palermo\",\"190.4424\",[\"13.361389338970184\",\"38.115556395496299\"]]",
-  "history": [
-    [
-      "6.2",
-      "Added the `ANY` option for `COUNT`."
-    ]
-  ],
-  "deprecated": true,
-  "syntax": "key longitude latitude radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count [ANY]] [ASC|DESC] [STORE key] [STOREDIST key]",
-  "acl_categories": [
-    "geo",
-    "write",
-    "slow"
-  ]
-}
-
 Return the members of a sorted set populated with geospatial information using [GEOADD](/commands/geoadd), which are within the borders of the area specified with the center location and the maximum distance from the center (the radius).
 
 As per Redis 6.2.0, GEORADIUS command family are considered deprecated. Please prefer [GEOSEARCH](/commands/geosearch) and [GEOSEARCHSTORE](/commands/geosearchstore) in new code.

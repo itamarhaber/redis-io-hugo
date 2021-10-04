@@ -1,24 +1,3 @@
-{
-  "title": "ZPOPMAX",
-  "summary": "Remove and return members with the highest scores in a sorted set",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)*M) with N being the number of elements in the sorted set, and M being the number of elements popped.",
-  "since": "5.0.0",
-  "return_summary": "@array-reply: list of popped elements and scores.",
-  "syntax": "key [count]",
-  "acl_categories": [
-    "sortedset",
-    "write",
-    "slow"
-  ]
-}
-
 Removes and returns up to `count` members with the highest scores in the sorted
 set stored at `key`.
 

@@ -1,24 +1,3 @@
-{
-  "title": "LATENCY DOCTOR",
-  "summary": "Return a human readable latency analysis report.",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.8.13",
-  "return_summary": "@bulk-string-reply",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [LATENCY DOCTOR](/commands/latency-doctor) command reports about different latency-related issues and advises about possible remedies.
 
 This command is the most powerful analysis tool in the latency monitoring

@@ -1,24 +1,3 @@
-{
-  "title": "ACL LOG",
-  "summary": "List latest events denied because of ACLs in place",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) with N being the number of entries shown.",
-  "since": "6.0.0",
-  "return_summary": "When called to show security events:\n\n@array-reply: a list of ACL security events.\n\nWhen called with `RESET`:\n\n@simple-string-reply: `OK` if the security log was cleared.",
-  "syntax": "[count or RESET]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command shows a list of recent ACL security events:
 
 1. Failures to authenticate their connections with [AUTH](/commands/auth) or [HELLO](/commands/hello).

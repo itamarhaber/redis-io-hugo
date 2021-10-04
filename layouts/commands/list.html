@@ -1,13 +1,28 @@
 {{ define "main" }}
+{{ $js := "js/commands-filter.js" }}
+<script src="{{ $js | absURL }}"></script>
 <main id="main">
   <div>
-    Filter by: ...
+    <!-- TODO -->
+    <span>
+      Filter by group:
+    </span>
+    <select>
+      <option>All</option>
+      {{ range $.Site.Data.group }}
+        <option value="{{ . }}">{{ . }}</option>
+      {{ end }}
+    </select>
+    or
+    <span>
+      search for:
+    </span>
+    <input autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="" placeholder="e.g. SPOP" spellcheck="false" class="js-command-reference-search">
   </div>
   <div class="commands-list">
     {{ range .Pages }}
-      <a href="{{ .RelPermalink }}" class="commands-summary">
+      <!-- TODO: fix elipsis in long syntices -->
       {{ .Render "summary" }}
-      </a>
     {{ end }}
   </div>
 </main>

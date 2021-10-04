@@ -1,24 +1,3 @@
-{
-  "title": "ZINCRBY",
-  "summary": "Increment the score of a member in a sorted set",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)) where N is the number of elements in the sorted set.",
-  "since": "1.2.0",
-  "return_summary": "@bulk-string-reply: the new score of `member` (a double precision floating point\nnumber), represented as string.",
-  "syntax": "key increment member",
-  "acl_categories": [
-    "sortedset",
-    "write",
-    "slow"
-  ]
-}
-
 Increments the score of `member` in the sorted set stored at `key` by
 `increment`.
 If `member` does not exist in the sorted set, it is added with `increment` as

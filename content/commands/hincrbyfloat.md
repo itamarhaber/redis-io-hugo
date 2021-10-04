@@ -1,24 +1,3 @@
-{
-  "title": "HINCRBYFLOAT",
-  "summary": "Increment the float value of a hash field by the given amount",
-  "group": "hash",
-  "tags": [
-    "Command",
-    "Hash"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "2.6.0",
-  "return_summary": "@bulk-string-reply: the value of `field` after the increment.",
-  "syntax": "key field increment",
-  "acl_categories": [
-    "hash",
-    "write",
-    "slow"
-  ]
-}
-
 Increment the specified `field` of a hash stored at `key`, and representing a
 floating point number, by the specified `increment`. If the increment value
 is negative, the result is to have the hash field value **decremented** instead of incremented.

@@ -1,11 +1,10 @@
 ---
 tags:
-- Documentation
-- ACL
-chapter:
-- administration
-description: ACL is a security feature that allows defining the permissions of connections in terms of the commands and key name patterns that can be accessed.
+- Security
+topics:
+- Administration
 title: Redis Access Control List (ACL)
+description: ACL is a security feature that allows defining the permissions of connections in terms of the commands and key name patterns that can be accessed.
 ---
 
 The Redis ACL, short for Access Control List, is the feature that allows certain

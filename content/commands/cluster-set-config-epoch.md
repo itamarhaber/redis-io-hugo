@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER SET-CONFIG-EPOCH",
-  "summary": "Set the configuration epoch in a new node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was executed successfully, otherwise an error is returned.",
-  "syntax": "config-epoch",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 This command sets a specific *config epoch* in a fresh node. It only works when:
 
 1. The nodes table of the node is empty.

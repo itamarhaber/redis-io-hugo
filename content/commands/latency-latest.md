@@ -1,24 +1,3 @@
-{
-  "title": "LATENCY LATEST",
-  "summary": "Return the latest latency samples for all events.",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.8.13",
-  "return_summary": "@array-reply: specifically:\n\nThe command returns an array where each element is a four elements array\nrepresenting the event's name, timestamp, latest and all-time latency measurements.",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [LATENCY LATEST](/commands/latency-latest) command reports the latest latency events logged.
 
 Each reported event has the following fields:

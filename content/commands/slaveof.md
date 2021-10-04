@@ -1,24 +1,3 @@
-{
-  "title": "SLAVEOF",
-  "summary": "Make the server a replica of another instance, or promote it as master. Deprecated starting with Redis 5. Use REPLICAOF instead.",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply",
-  "syntax": "host port",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 **A note about the word slave used in this man page and command name**: Starting with Redis 5 this command: starting with Redis version 5, if not for backward compatibility, the Redis project no longer uses the word slave. Please use the new command [REPLICAOF](/commands/replicaof). The command [SLAVEOF](/commands/slaveof) will continue to work for backward compatibility.
 
 The [SLAVEOF](/commands/slaveof) command can change the replication settings of a replica on the fly.

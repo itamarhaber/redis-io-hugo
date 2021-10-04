@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER RESET",
-  "summary": "Reset a Redis Cluster node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of known nodes. The command may execute a FLUSHALL as a side effect.",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was successful. Otherwise an error is returned.",
-  "syntax": "[HARD|SOFT]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Reset a Redis Cluster node, in a more or less drastic way depending on the
 reset type, that can be **hard** or **soft**. Note that this command
 **does not work for masters if they hold one or more keys**, in that case

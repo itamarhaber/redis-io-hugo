@@ -1,24 +1,3 @@
-{
-  "title": "MSETNX",
-  "summary": "Set multiple keys to multiple values, only if none of the keys exist",
-  "group": "string",
-  "tags": [
-    "Command",
-    "String"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the number of keys to set.",
-  "since": "1.0.1",
-  "return_summary": "@integer-reply, specifically:\n\n* `1` if the all the keys were set.\n* `0` if no key was set (at least one key already existed).",
-  "syntax": "key value ...",
-  "acl_categories": [
-    "string",
-    "write",
-    "slow"
-  ]
-}
-
 Sets the given keys to their respective values.
 [MSETNX](/commands/msetnx) will not perform any operation at all even if just a single key already
 exists.

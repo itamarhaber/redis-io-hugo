@@ -1,24 +1,3 @@
-{
-  "title": "LATENCY RESET",
-  "summary": "Reset latency data for one or more events.",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.8.13",
-  "return_summary": "@integer-reply: the number of event time series that were reset.",
-  "syntax": "[event ...]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [LATENCY RESET](/commands/latency-reset) command resets the latency spikes time series of all, or only some, events.
 
 When the command is called without arguments, it resets all the

@@ -1,25 +1,3 @@
-{
-  "title": "CLIENT ID",
-  "summary": "Returns the client ID for the current connection",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "5.0.0",
-  "return_summary": "@integer-reply\n\nThe id of the client.",
-  "syntax": "",
-  "acl_categories": [
-    "connection",
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command just returns the ID of the current connection. Every connection
 ID has certain guarantees:
 

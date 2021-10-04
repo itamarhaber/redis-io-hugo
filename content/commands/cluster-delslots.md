@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER DELSLOTS",
-  "summary": "Set hash slots as unbound in receiving node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the total number of hash slot arguments",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was successful. Otherwise\nan error is returned.",
-  "syntax": "slot ...",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 In Redis Cluster, each node keeps track of which master is serving
 a particular hash slot.
 

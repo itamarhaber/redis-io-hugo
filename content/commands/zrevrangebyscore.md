@@ -1,24 +1,3 @@
-{
-  "title": "ZREVRANGEBYSCORE",
-  "summary": "Return a range of members in a sorted set, by score, with scores ordered from high to low",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)+M) with N being the number of elements in the sorted set and M the number of elements being returned. If M is constant (e.g. always asking for the first 10 elements with LIMIT), you can consider it O(log(N)).",
-  "since": "2.2.0",
-  "return_summary": "@array-reply: list of elements in the specified score range (optionally\nwith their scores).",
-  "deprecated": true,
-  "syntax": "key max min [WITHSCORES] [LIMIT offset count]",
-  "acl_categories": [
-    "sortedset",
-    "slow"
-  ]
-}
-
 Returns all the elements in the sorted set at `key` with a score between `max`
 and `min` (including elements with score equal to `max` or `min`).
 In contrary to the default ordering of sorted sets, for this command the

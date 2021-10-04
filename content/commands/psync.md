@@ -1,24 +1,3 @@
-{
-  "title": "PSYNC",
-  "summary": "Internal command used for replication",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.8.0",
-  "return_summary": "**Non standard return value**, a bulk transfer of the data followed by `PING` and write requests from the master.",
-  "syntax": "replicationid offset",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Initiates a replication stream from the master.
 
 The [PSYNC](/commands/psync) command is called by Redis replicas for initiating a replication

@@ -1,22 +1,3 @@
-{
-  "title": "MEMORY STATS",
-  "summary": "Show memory usage details",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "4.0.0",
-  "return_summary": "@array-reply: nested list of memory usage metrics and their values\n\n**A note about the word slave used in this man page**: Starting with Redis 5, if not for backward compatibility, the Redis project no longer uses the word slave. Unfortunately in this command the word slave is part of the protocol, so we'll be able to remove such occurrences only when this API will be naturally deprecated.",
-  "syntax": "",
-  "acl_categories": [
-    "slow"
-  ]
-}
-
 The [MEMORY STATS](/commands/memory-stats) command returns an @array-reply about the memory usage of the
 server.
 

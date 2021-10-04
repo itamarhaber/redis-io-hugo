@@ -1,24 +1,3 @@
-{
-  "title": "SETEX",
-  "summary": "Set the value and expiration of a key",
-  "group": "string",
-  "tags": [
-    "Command",
-    "String"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "2.0.0",
-  "return_summary": "@simple-string-reply",
-  "syntax": "key seconds value",
-  "acl_categories": [
-    "string",
-    "write",
-    "slow"
-  ]
-}
-
 Set `key` to hold the string `value` and set `key` to timeout after a given
 number of seconds.
 This command is equivalent to executing the following commands:

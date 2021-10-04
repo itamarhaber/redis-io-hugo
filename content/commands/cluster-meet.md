@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER MEET",
-  "summary": "Force a node cluster to handshake with another node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was successful. If the address or port specified are invalid an error is returned.",
-  "syntax": "ip port",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 [CLUSTER MEET](/commands/cluster-meet) is used in order to connect different Redis nodes with cluster
 support enabled, into a working cluster.
 

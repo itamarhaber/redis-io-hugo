@@ -1,23 +1,3 @@
-{
-  "title": "EVAL_RO",
-  "summary": "Execute a read-only Lua script server side",
-  "group": "scripting",
-  "tags": [
-    "Command",
-    "Scripting"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "Depends on the script that is executed.",
-  "since": "7.0.0",
-  "return_summary": "<summary>",
-  "syntax": "script numkeys key ... arg ...",
-  "acl_categories": [
-    "scripting",
-    "slow"
-  ]
-}
-
 This is a read-only variant of the [EVAL](/commands/eval) command that isn't allowed to execute commands that modify data.
 
 Unlike [EVAL](/commands/eval), scripts executed with this command can always be killed and never affect the replication stream.

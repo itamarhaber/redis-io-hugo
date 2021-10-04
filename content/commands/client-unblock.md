@@ -1,25 +1,3 @@
-{
-  "title": "CLIENT UNBLOCK",
-  "summary": "Unblock a client blocked in a blocking command from a different connection",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log N) where N is the number of client connections",
-  "since": "5.0.0",
-  "return_summary": "@integer-reply, specifically:\n\n* `1` if the client was unblocked successfully.\n* `0` if the client wasn't unblocked.",
-  "syntax": "client-id [TIMEOUT|ERROR]",
-  "acl_categories": [
-    "connection",
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 This command can unblock, from a different connection, a client blocked in a blocking operation, such as for instance [BRPOP](/commands/brpop) or [XREAD](/commands/xread) or [WAIT](/commands/wait).
 
 By default the client is unblocked as if the timeout of the command was

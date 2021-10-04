@@ -1,24 +1,3 @@
-{
-  "title": "ZINTERSTORE",
-  "summary": "Intersect multiple sorted sets and store the resulting sorted set in a new key",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N*K)+O(M*log(M)) worst case with N being the smallest input sorted set, K being the number of input sorted sets and M being the number of elements in the resulting sorted set.",
-  "since": "2.0.0",
-  "return_summary": "@integer-reply: the number of elements in the resulting sorted set at\n`destination`.",
-  "syntax": "destination numkeys key ... [WEIGHTS weight] [AGGREGATE aggregate]",
-  "acl_categories": [
-    "sortedset",
-    "write",
-    "slow"
-  ]
-}
-
 Computes the intersection of `numkeys` sorted sets given by the specified keys,
 and stores the result in `destination`.
 It is mandatory to provide the number of input keys (`numkeys`) before passing

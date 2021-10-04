@@ -1,24 +1,3 @@
-{
-  "title": "XREAD",
-  "summary": "Return never seen elements in multiple streams, with IDs greater than the ones reported by the caller for each stream. Can block.",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "For each stream mentioned: O(N) with N being the number of elements being returned, it means that XREAD-ing with a fixed COUNT is O(1). Note that when the BLOCK option is used, XADD will pay O(M) time in order to serve the M clients blocked on the stream getting new data.",
-  "since": "5.0.0",
-  "return_summary": "@array-reply, specifically:\n\nThe command returns an array of results: each element of the returned\narray is an array composed of a two element containing the key name and\nthe entries reported for that key. The entries reported are full stream\nentries, having IDs and the list of all the fields and values. Field and\nvalues are guaranteed to be reported in the same order they were added\nby `XADD`.\n\nWhen **BLOCK** is used, on timeout a null reply is returned.\n\nReading the [Redis Streams introduction](/topics/streams-intro) is highly\nsuggested in order to understand more about the streams overall behavior\nand semantics.",
-  "syntax": "[COUNT count] [BLOCK milliseconds] STREAMS key ... ID ...",
-  "acl_categories": [
-    "stream",
-    "blocking",
-    "slow"
-  ]
-}
-
 Read data from one or multiple streams, only returning entries with an
 ID greater than the last received ID reported by the caller.
 This command has an option to block if items are not available, in a similar

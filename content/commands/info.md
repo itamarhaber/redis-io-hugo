@@ -1,24 +1,3 @@
-{
-  "title": "INFO",
-  "summary": "Get information and statistics about the server",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "@bulk-string-reply: as a collection of text lines.\n\nLines can contain a section name (starting with a # character) or a property.\nAll the properties are in the form of `field:value` terminated by `\\r\\n`.\n\n```cli\nINFO\n```",
-  "deprecated": true,
-  "syntax": "[section]",
-  "acl_categories": [
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [INFO](/commands/info) command returns information and statistics about the server in a
 format that is simple to parse by computers and easy to read by humans.
 

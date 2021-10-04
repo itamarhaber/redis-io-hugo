@@ -1,24 +1,3 @@
-{
-  "title": "XCLAIM",
-  "summary": "Changes (or acquires) ownership of a message in a consumer group, as if the message was delivered to the specified consumer.",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log N) with N being the number of messages in the PEL of the consumer group.",
-  "since": "5.0.0",
-  "return_summary": "@array-reply, specifically:\n\nThe command returns all the messages successfully claimed, in the same format\nas `XRANGE`. However if the `JUSTID` option was specified, only the message\nIDs are reported, without including the actual message.",
-  "syntax": "key group consumer min-idle-time ID ... [IDLE ms] [TIME ms-unix-time] [RETRYCOUNT count] [FORCE] [JUSTID]",
-  "acl_categories": [
-    "stream",
-    "write",
-    "slow"
-  ]
-}
-
 In the context of a stream consumer group, this command changes the ownership
 of a pending message, so that the new owner is the consumer specified as the
 command argument. Normally this is what happens:

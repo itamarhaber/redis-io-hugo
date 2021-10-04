@@ -1,23 +1,3 @@
-{
-  "title": "DUMP",
-  "summary": "Return a serialized version of the value stored at the specified key.",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) to access the key and additional O(N*M) to serialize it, where N is the number of Redis objects composing the value and M their average size. For small string values the time complexity is thus O(1)+O(1*M) where M is small, so simply O(1).",
-  "since": "2.6.0",
-  "return_summary": "@bulk-string-reply: the serialized value.",
-  "syntax": "key",
-  "acl_categories": [
-    "keyspace",
-    "slow"
-  ]
-}
-
 Serialize the value stored at key in a Redis-specific format and return it to
 the user.
 The returned value can be synthesized back into a Redis key using the [RESTORE](/commands/restore)

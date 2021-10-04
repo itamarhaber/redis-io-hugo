@@ -1,24 +1,3 @@
-{
-  "title": "ACL LIST",
-  "summary": "List the current ACL rules in ACL config file format",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N). Where N is the number of configured users.",
-  "since": "6.0.0",
-  "return_summary": "An array of strings.",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command shows the currently active ACL rules in the Redis server. Each
 line in the returned array defines a different user, and the format is the
 same used in the redis.conf file or the external ACL file, so you can

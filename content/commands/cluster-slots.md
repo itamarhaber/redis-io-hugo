@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER SLOTS",
-  "summary": "Get array of Cluster slot to node mappings",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) where N is the total number of Cluster nodes",
-  "since": "3.0.0",
-  "return_summary": "@array-reply: nested list of slot ranges with IP/Port mappings.",
-  "syntax": "",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 [CLUSTER SLOTS](/commands/cluster-slots) returns details about which cluster slots map to which
 Redis instances. The command is suitable to be used by Redis Cluster client
 libraries implementations in order to retrieve (or update when a redirection

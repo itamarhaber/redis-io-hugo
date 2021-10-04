@@ -1,25 +1,3 @@
-{
-  "title": "CLIENT CACHING",
-  "summary": "Instruct the server about tracking or not keys in the next request",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "6.0.0",
-  "return_summary": "@simple-string-reply: `OK` or an error if the argument is not yes or no.",
-  "syntax": "YES|NO",
-  "acl_categories": [
-    "connection",
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 This command controls the tracking of the keys in the next command executed
 by the connection, when tracking is enabled in `OPTIN` or `OPTOUT` mode.
 Please check the

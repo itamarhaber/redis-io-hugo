@@ -1,24 +1,3 @@
-{
-  "title": "SETBIT",
-  "summary": "Sets or clears the bit at offset in the string value stored at key",
-  "group": "bitmap",
-  "tags": [
-    "Command",
-    "Bitmap"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "2.2.0",
-  "return_summary": "@integer-reply: the original bit value stored at _offset_.",
-  "syntax": "key offset value",
-  "acl_categories": [
-    "bitmap",
-    "write",
-    "slow"
-  ]
-}
-
 Sets or clears the bit at _offset_ in the string value stored at _key_.
 
 The bit is either set or cleared depending on _value_, which can be either 0 or

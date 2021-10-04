@@ -1,23 +1,3 @@
-{
-  "title": "PFCOUNT",
-  "summary": "Return the approximated cardinality of the set(s) observed by the HyperLogLog at key(s).",
-  "group": "hyperloglog",
-  "tags": [
-    "Command",
-    "Hyperloglog"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) with a very small average constant time when called with a single key. O(N) with N being the number of keys, and much bigger constant times, when called with multiple keys.",
-  "since": "2.8.9",
-  "return_summary": "@integer-reply, specifically:\n\n* The approximated number of unique elements observed via `PFADD`.",
-  "syntax": "key ...",
-  "acl_categories": [
-    "hyperloglog",
-    "slow"
-  ]
-}
-
 When called with a single key, returns the approximated cardinality computed by the HyperLogLog data structure stored at the specified variable, which is 0 if the variable does not exist.
 
 When called with multiple keys, returns the approximated cardinality of the union of the HyperLogLogs passed, by internally merging the HyperLogLogs stored at the provided keys into a temporary HyperLogLog.

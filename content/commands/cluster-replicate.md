@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER REPLICATE",
-  "summary": "Reconfigure a node as a replica of the specified master node",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was executed successfully, otherwise an error is returned.",
-  "syntax": "node-id",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command reconfigures a node as a replica of the specified master.
 If the node receiving the command is an *empty master*, as a side effect
 of the command, the node role is changed from master to replica.

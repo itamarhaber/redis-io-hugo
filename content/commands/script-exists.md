@@ -1,23 +1,3 @@
-{
-  "title": "SCRIPT EXISTS",
-  "summary": "Check existence of scripts in the script cache.",
-  "group": "scripting",
-  "tags": [
-    "Command",
-    "Scripting"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) with N being the number of scripts to check (so checking a single script is an O(1) operation).",
-  "since": "2.6.0",
-  "return_summary": "@array-reply The command returns an array of integers that correspond to\nthe specified SHA1 digest arguments.\nFor every corresponding SHA1 digest of a script that actually exists in the\nscript cache, an 1 is returned, otherwise 0 is returned.",
-  "syntax": "sha1 ...",
-  "acl_categories": [
-    "scripting",
-    "slow"
-  ]
-}
-
 Returns information about the existence of the scripts in the script cache.
 
 This command accepts one or more SHA1 digests and returns a list of ones or

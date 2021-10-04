@@ -1,19 +1,3 @@
-{
-  "title": "BLMPOP",
-  "summary": "Pop elements from a list, or block until one is available",
-  "group": "list",
-  "tags": [
-    "Command",
-    "List"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N+M) where N is the number of provided keys and M is the number of elements returned.",
-  "since": "7.0.0",
-  "return_summary": "@array-reply: specifically:\n\n* A `nil` when no element could be popped, and timeout is reached.\n* A two-element array with the first element being the name of the key from which elements were popped, and the second element is an array of elements.",
-  "syntax": "timeout numkeys [key ...] LEFT|RIGHT [COUNT count]"
-}
-
 [BLMPOP](/commands/blmpop) is the blocking variant of [LMPOP](/commands/lmpop).
 
 When any of the lists contains elements, this command behaves exactly like [LMPOP](/commands/lmpop).

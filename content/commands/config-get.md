@@ -1,24 +1,3 @@
-{
-  "title": "CONFIG GET",
-  "summary": "Get the value of a configuration parameter",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "2.0.0",
-  "return_summary": "The return type of the command is a @array-reply.",
-  "syntax": "parameter",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The [CONFIG GET](/commands/config-get) command is used to read the configuration parameters of a
 running Redis server.
 Not all the configuration parameters are supported in Redis 2.4, while Redis 2.6

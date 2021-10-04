@@ -1,29 +1,3 @@
-{
-  "title": "ZRANGE",
-  "summary": "Return a range of members in a sorted set",
-  "group": "sorted_set",
-  "tags": [
-    "Command",
-    "Sorted_set"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(log(N)+M) with N being the number of elements in the sorted set and M the number of elements returned.",
-  "since": "1.2.0",
-  "return_summary": "@array-reply: list of elements in the specified range (optionally with\ntheir scores, in case the `WITHSCORES` option is given).",
-  "history": [
-    [
-      "6.2",
-      "Added the `REV`, `BYSCORE`, `BYLEX` and `LIMIT` options."
-    ]
-  ],
-  "syntax": "key min max [BYSCORE|BYLEX] [REV] [LIMIT offset count] [WITHSCORES]",
-  "acl_categories": [
-    "sortedset",
-    "slow"
-  ]
-}
-
 Returns the specified range of elements in the sorted set stored at `<key>`.
 
 [ZRANGE](/commands/zrange) can perform different types of range queries: by index (rank), by the score, or by lexicographical order.

@@ -1,23 +1,3 @@
-{
-  "title": "OBJECT",
-  "summary": "Inspect the internals of Redis objects",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) for all the currently implemented subcommands.",
-  "since": "2.2.3",
-  "return_summary": "Different return values are used for different subcommands.\n\n* Subcommands `refcount` and `idletime` return integers.\n* Subcommand `encoding` returns a bulk reply.\n\nIf the object you try to inspect is missing, a null bulk reply is returned.",
-  "syntax": "subcommand [arguments ...]",
-  "acl_categories": [
-    "keyspace",
-    "slow"
-  ]
-}
-
 The [OBJECT](/commands/object) command allows to inspect the internals of Redis Objects associated
 with keys.
 It is useful for debugging or to understand if your keys are using the specially

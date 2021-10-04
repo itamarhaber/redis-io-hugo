@@ -1,30 +1,3 @@
-{
-  "title": "XADD",
-  "summary": "Appends a new entry to a stream",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1) when adding a new entry, O(N) when trimming where N being the number of entires evicted.",
-  "since": "5.0.0",
-  "return_summary": "@bulk-string-reply, specifically:\n\nThe command returns the ID of the added entry. The ID is the one auto-generated\nif `*` is passed as ID argument, otherwise the command just returns the same ID\nspecified by the user during insertion.\n\nThe command returns a @nil-reply when used with the `NOMKSTREAM` option and the\nkey doesn't exist.",
-  "history": [
-    [
-      "6.2",
-      "Added the `NOMKSTREAM` option, `MINID` trimming strategy and the `LIMIT` option."
-    ]
-  ],
-  "syntax": "key [NOMKSTREAM] [MAXLEN|MINID [=|~] threshold [LIMIT count]] *|ID field value ...",
-  "acl_categories": [
-    "stream",
-    "write",
-    "slow"
-  ]
-}
-
 Appends the specified stream entry to the stream at the specified key.
 If the key does not exist, as a side effect of running this command the
 key is created with a stream value. The creation of stream's key can be

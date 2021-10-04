@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER FORGET",
-  "summary": "Remove a node from the nodes table",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was executed successfully, otherwise an error is returned.",
-  "syntax": "node-id",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 The command is used in order to remove a node, specified via its node ID,
 from the set of *known nodes* of the Redis Cluster node receiving the command.
 In other words the specified node is removed from the *nodes table* of the

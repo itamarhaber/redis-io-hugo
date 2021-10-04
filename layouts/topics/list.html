@@ -2,7 +2,7 @@
 <main id="main">
   <section>
     <ul>
-      {{ range (.GetTerms "document") }}
+      {{ range .Pages }}
         <li>{{ . }}
         </li>
       {{ end }}

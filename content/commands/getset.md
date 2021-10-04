@@ -1,25 +1,3 @@
-{
-  "title": "GETSET",
-  "summary": "Set the string value of a key and return its old value",
-  "group": "string",
-  "tags": [
-    "Command",
-    "String"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "1.0.0",
-  "return_summary": "@bulk-string-reply: the old value stored at `key`, or `nil` when `key` did not exist.",
-  "deprecated": true,
-  "syntax": "key value",
-  "acl_categories": [
-    "string",
-    "write",
-    "slow"
-  ]
-}
-
 Atomically sets `key` to `value` and returns the old value stored at `key`.
 Returns an error when `key` exists but does not hold a string value.  Any 
 previous time to live associated with the key is discarded on successful 

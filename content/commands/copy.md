@@ -1,24 +1,3 @@
-{
-  "title": "COPY",
-  "summary": "Copy a key",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N) worst case for collections, where N is the number of nested items. O(1) for string values.",
-  "since": "6.2.0",
-  "return_summary": "@integer-reply, specifically:\n\n* `1` if `source` was copied.\n* `0` if `source` was not copied.",
-  "syntax": "source destination [DB destination-db] [REPLACE]",
-  "acl_categories": [
-    "keyspace",
-    "write",
-    "slow"
-  ]
-}
-
 This command copies the value stored at the `source` key to the `destination`
 key.
 

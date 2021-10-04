@@ -1,25 +1,3 @@
-{
-  "title": "GEORADIUSBYMEMBER",
-  "summary": "Query a sorted set representing a geospatial index to fetch members matching a given maximum distance from a member",
-  "group": "geo",
-  "tags": [
-    "Command",
-    "Geo"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N+log(M)) where N is the number of elements inside the bounding box of the circular area delimited by center and radius and M is the number of items inside the index.",
-  "since": "3.2.0",
-  "return_summary": "<summary>",
-  "deprecated": true,
-  "syntax": "key member radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count [ANY]] [ASC|DESC] [STORE key] [STOREDIST key]",
-  "acl_categories": [
-    "geo",
-    "write",
-    "slow"
-  ]
-}
-
 This command is exactly like [GEORADIUS](/commands/georadius) with the sole difference that instead
 of taking, as the center of the area to query, a longitude and latitude value, it takes the name of a member already existing inside the geospatial index represented by the sorted set.
 

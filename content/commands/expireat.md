@@ -1,30 +1,3 @@
-{
-  "title": "EXPIREAT",
-  "summary": "Set the expiration for a key as a UNIX timestamp",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "1.2.0",
-  "return_summary": "@integer-reply, specifically:\n\n* `1` if the timeout was set.\n* `0` if the timeout was not set. e.g. key doesn't exist, or operation skipped due to the provided arguments.",
-  "history": [
-    [
-      "7.0",
-      "Added options: `NX`, `XX`, `GT` and `LT`."
-    ]
-  ],
-  "syntax": "key timestamp [NX|XX|GT|LT]",
-  "acl_categories": [
-    "keyspace",
-    "write",
-    "slow"
-  ]
-}
-
 [EXPIREAT](/commands/expireat) has the same effect and semantic as [EXPIRE](/commands/expire), but instead of
 specifying the number of seconds representing the TTL (time to live), it takes
 an absolute [Unix timestamp][hewowu] (seconds since January 1, 1970). A

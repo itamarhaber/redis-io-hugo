@@ -1,8 +1,12 @@
-Redis Administration
-===
-
-This page contains topics related to the administration of Redis instances.
-Every topic is self contained in form of a FAQ. New topics will be created in the future.
+---
+tags:
+- Install
+- Upgrade
+topics:
+- Administration
+title: Redis Administration
+description: This page contains topics related to the administration of Redis instances. Every topic is self contained in form of a FAQ. New topics will be created in the future.
+---
 
 Redis setup hints
 -----------------

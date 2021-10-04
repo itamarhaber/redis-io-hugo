@@ -1,30 +1,3 @@
-{
-  "title": "BGSAVE",
-  "summary": "Asynchronously save the dataset to disk",
-  "group": "server",
-  "tags": [
-    "Command",
-    "Server"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "TBD",
-  "since": "1.0.0",
-  "return_summary": "@simple-string-reply: `Background saving started` if `BGSAVE` started correctly or `Background saving scheduled` when used with the `SCHEDULE` subcommand.",
-  "history": [
-    [
-      "3.2.2",
-      "Added the `SCHEDULE` option."
-    ]
-  ],
-  "syntax": "[SCHEDULE]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 Save the DB in background.
 
 Normally the OK code is immediately returned.

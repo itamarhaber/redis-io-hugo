@@ -1,27 +1,3 @@
-{
-  "title": "SORT",
-  "summary": "Sort the elements in a list, set or sorted set",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N+M*log(M)) where N is the number of elements in the list or set to sort, and M the number of returned elements. When the elements are not sorted, complexity is O(N).",
-  "since": "1.0.0",
-  "return_summary": "@array-reply: without passing the `store` option the command returns a list of sorted elements.\n@integer-reply: when the `store` option is specified the command returns the number of sorted elements in the destination list.",
-  "syntax": "key [BY pattern] [LIMIT offset count] [GET pattern ...] [ASC|DESC] [ALPHA] [STORE destination]",
-  "acl_categories": [
-    "list",
-    "set",
-    "sortedset",
-    "dangerous",
-    "write",
-    "slow"
-  ]
-}
-
 Returns or stores the elements contained in the [list][tdtl], [set][tdts] or
 [sorted set][tdtss] at `key`.
 

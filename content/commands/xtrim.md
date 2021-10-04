@@ -1,30 +1,3 @@
-{
-  "title": "XTRIM",
-  "summary": "Trims the stream to (approximately if '~' is passed) a certain size",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(N), with N being the number of evicted entries. Constant times are very small however, since entries are organized in macro nodes containing multiple entries that can be released with a single deallocation.",
-  "since": "5.0.0",
-  "return_summary": "@integer-reply: The number of entries deleted from the stream.",
-  "history": [
-    [
-      "6.2",
-      "Added the `MINID` trimming strategy and the `LIMIT` option."
-    ]
-  ],
-  "syntax": "key MAXLEN|MINID [=|~] threshold [LIMIT count]",
-  "acl_categories": [
-    "stream",
-    "write",
-    "slow"
-  ]
-}
-
 [XTRIM](/commands/xtrim) trims the stream by evicting older entries (entries with lower IDs) if needed.
 
 Trimming the stream can be done using one of these strategies:

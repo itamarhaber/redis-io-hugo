@@ -1,23 +1,3 @@
-{
-  "title": "TTL",
-  "summary": "Get the time to live for a key in seconds",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "1.0.0",
-  "return_summary": "@integer-reply: TTL in seconds, or a negative value in order to signal an error (see the description above).",
-  "syntax": "key",
-  "acl_categories": [
-    "keyspace",
-    "slow"
-  ]
-}
-
 Returns the remaining time to live of a key that has a timeout.
 This introspection capability allows a Redis client to check how many seconds a
 given key will continue to be part of the dataset.

@@ -1,23 +1,3 @@
-{
-  "title": "SCRIPT KILL",
-  "summary": "Kill the script currently in execution.",
-  "group": "scripting",
-  "tags": [
-    "Command",
-    "Scripting"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "2.6.0",
-  "return_summary": "@simple-string-reply",
-  "syntax": "",
-  "acl_categories": [
-    "scripting",
-    "slow"
-  ]
-}
-
 Kills the currently executing Lua script, assuming no write operation was yet
 performed by the script.
 

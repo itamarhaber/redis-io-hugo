@@ -1,25 +1,3 @@
-{
-  "title": "XREADGROUP",
-  "summary": "Return new entries from a stream using a consumer group, or access the history of the pending entries for a given consumer. Can block.",
-  "group": "stream",
-  "tags": [
-    "Command",
-    "Stream"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "For each stream mentioned: O(M) with M being the number of elements returned. If M is constant (e.g. always asking for the first 10 elements with COUNT), you can consider it O(1). On the other side when XREADGROUP blocks, XADD will pay the O(N) time in order to serve the N clients blocked on the stream getting new data.",
-  "since": "5.0.0",
-  "return_summary": "@array-reply, specifically:\n\nThe command returns an array of results: each element of the returned\narray is an array composed of a two element containing the key name and\nthe entries reported for that key. The entries reported are full stream\nentries, having IDs and the list of all the fields and values. Field and\nvalues are guaranteed to be reported in the same order they were added\nby `XADD`.\n\nWhen **BLOCK** is used, on timeout a null reply is returned.\n\nReading the [Redis Streams introduction](/topics/streams-intro) is highly\nsuggested in order to understand more about the streams overall behavior\nand semantics.",
-  "syntax": "GROUP group consumer [COUNT count] [BLOCK milliseconds] [NOACK] STREAMS key ... ID ...",
-  "acl_categories": [
-    "stream",
-    "blocking",
-    "write",
-    "slow"
-  ]
-}
-
 The [XREADGROUP](/commands/xreadgroup) command is a special version of the [XREAD](/commands/xread) command
 with support for consumer groups. Probably you will have to understand the
 [XREAD](/commands/xread) command before reading this page will makes sense.

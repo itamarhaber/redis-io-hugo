@@ -1,30 +1,3 @@
-{
-  "title": "EXPIRE",
-  "summary": "Set a key's time to live in seconds",
-  "group": "generic",
-  "tags": [
-    "Command",
-    "Generic"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "1.0.0",
-  "return_summary": "@integer-reply, specifically:\n\n* `1` if the timeout was set.\n* `0` if the timeout was not set. e.g. key doesn't exist, or operation skipped due to the provided arguments.",
-  "history": [
-    [
-      "7.0",
-      "Added options: `NX`, `XX`, `GT` and `LT`."
-    ]
-  ],
-  "syntax": "key seconds [NX|XX|GT|LT]",
-  "acl_categories": [
-    "keyspace",
-    "write",
-    "slow"
-  ]
-}
-
 Set a timeout on `key`.
 After the timeout has expired, the key will automatically be deleted.
 A key with an associated timeout is often said to be _volatile_ in Redis

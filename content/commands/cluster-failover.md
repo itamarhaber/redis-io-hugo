@@ -1,24 +1,3 @@
-{
-  "title": "CLUSTER FAILOVER",
-  "summary": "Forces a replica to perform a manual failover of its master.",
-  "group": "cluster",
-  "tags": [
-    "Command",
-    "Cluster"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "3.0.0",
-  "return_summary": "@simple-string-reply: `OK` if the command was accepted and a manual failover is going to be attempted. An error if the operation cannot be executed, for example if we are talking with a node which is already a master.",
-  "syntax": "[FORCE|TAKEOVER]",
-  "acl_categories": [
-    "admin",
-    "dangerous",
-    "slow"
-  ]
-}
-
 This command, that can only be sent to a Redis Cluster replica node, forces
 the replica to start a manual failover of its master instance.
 

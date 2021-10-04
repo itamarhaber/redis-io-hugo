@@ -1,29 +1,3 @@
-{
-  "title": "HELLO",
-  "summary": "Handshake with Redis",
-  "group": "connection",
-  "tags": [
-    "Command",
-    "Connection"
-  ],
-  "date": "2001-02-03",
-  "lastmod": "2001-02-03",
-  "complexity": "O(1)",
-  "since": "6.0.0",
-  "return_summary": "@array-reply: a list of server properties. The reply is a map instead of an array when RESP3 is selected. The command returns an error if the `protover` requested does not exist.",
-  "history": [
-    [
-      "6.2",
-      "`protover` made optional; when called without arguments the command reports the current connection's context."
-    ]
-  ],
-  "syntax": "[protover [AUTH username password] [SETNAME clientname]]",
-  "acl_categories": [
-    "connection",
-    "slow"
-  ]
-}
-
 Switch to a different protocol, optionally authenticating and setting the
 connection's name, or provide a contextual client report.
 
