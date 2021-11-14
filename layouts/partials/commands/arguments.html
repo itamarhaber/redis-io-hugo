@@ -27,9 +27,6 @@
     {{ else if in (slice "integer" "double" "string" "posix time" "type" "pattern" "key") $arg.type }}
       <!-- Simple types  -->
       {{ $s = printf "%s" $arg.name }}
-      {{ if isset $arg "multiple" }}
-        {{ $s = printf "%s [%s ...]" $s $s }}
-      {{ end }}
     {{ else if eq $arg.type "enum" }}
       <!-- Enum type -->
       {{ range $arg.enum }}
@@ -47,6 +44,10 @@
     {{ else }}
       {{ errorf "Unhandeled argument type %s" . }}
     {{ end }}
+  {{ end }}
+
+  {{ if isset $arg "multiple" }}
+    {{ $s = printf "%s [%s ...]" $s $s }}
   {{ end }}
 
   {{ if and (isset $arg "command") (not (eq $arg.type "command")) }}
